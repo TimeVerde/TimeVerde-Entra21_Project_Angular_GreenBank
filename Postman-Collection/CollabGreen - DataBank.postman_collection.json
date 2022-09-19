@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "3d94df88-63a8-4fde-86bb-116d57bdf859",
+		"name": "CollabGreen - DataBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23249649"
+	},
+	"item": [
+		{
+			"name": "GET List-All Pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas"
+					]
+				},
+				"description": "Essa requisação serve para listar todas a pessoas do meu banco de dado."
+			},
+			"response": []
+		},
+		{
+			"name": "GET by ID Pessoa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoas/{ id }",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"{ id }"
+					]
+				},
+				"description": "Essa requisação serve para capturar uma pessoa de uma lista de pessoas do meu banco de dado."
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE by ID Pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoas/{ id }",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"{ id }"
+					]
+				},
+				"description": "Essa requisação serve para capturar uma pessoa de uma lista de pessoas do meu banco de dado."
+			},
+			"response": []
+		},
+		{
+			"name": "POST Pessoa Created",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nome\":\"Cauê Sebastião Martin Santos\",\r\n\"cpf\":\"893.070.262-70\",\r\n\"rg\":\"28.900.641-7\",\r\n\"data_nascimento\":\"02/06/1948\",\r\n\"mae\":\"Esther Yasmin\",\r\n\"pai\":\"José Cláudio Kevin Santos\",\r\n\"cep\":\"64207-408\",\r\n\"endereco\":\"Rua Bernardo Antonio Saraiva\",\r\n\"celular\":\"(86) 99368-0268\",\r\n\"senha\":\"5Laiq86szn\",\r\n\"email\":\"cauesebastiaosantos@reconciliare.com.br\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas"
+					]
+				},
+				"description": "Essa requisição serve para criar uma pessoa e adicionar ao banco de dados."
+			},
+			"response": []
+		},
+		{
+			"name": "POST Pessoa Created Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nome\":\"Luiz Marcos Vinicius Gustavo Nogueira\",\r\n\"cpf\":\"121.476.488-68\",\r\n\"rg\":\"41.859.395-4\",\r\n\"data_nascimento\":\"04/09/1985\",\r\n\"mae\":\"Luciana Lara Isis\",\r\n\"pai\":\"Diogo Edson Nogueira\",\r\n\"cep\":\"71995-455\",\r\n\"endereco\":\"Conjunto SHA Conjunto 5 Chácara 110\",\r\n\"celular\":\"(61) 99445-1841\",\r\n\"senha\":\"1Pyo3ZrKBr\",\r\n\"email\":\"luizmarcosnogueira@myself.com\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas/{ id }",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"{ id }"
+					]
+				},
+				"description": "Essa requisição serve para atualizar uma pessoa e adicionar ao bando de dados."
+			},
+			"response": []
+		}
+	]
+}
