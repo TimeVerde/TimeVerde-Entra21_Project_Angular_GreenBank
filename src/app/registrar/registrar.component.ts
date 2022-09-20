@@ -1,6 +1,8 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { PessoaService } from '../services/pessoa.service';
 import { catchError, of } from 'rxjs';
+import { Router } from '@angular/router';
+import { SegurancaService } from '../services/seguranca.service';
 
 @Component({
   selector: 'app-registrar',
@@ -12,10 +14,15 @@ export class RegistrarComponent implements OnInit {
   pessoa!: any;
   cadastrando!: boolean;
 
-  constructor(private pessoaService: PessoaService) {}
+  constructor(private pessoaService: PessoaService, private seguranca: SegurancaService, private router: Router) {}
 
   ngOnInit(): void {
     this.getAll();
+  }
+
+  login(): void {
+    this.seguranca.entrou = true;
+    this.router.navigateByUrl("")
   }
 
   getAll(): void {
