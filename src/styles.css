@@ -1,0 +1,29 @@
+:root {
+  --color-white: #fff;
+  --color-green: #00ff5f;
+  --color-dark-green: #01A550;
+  --color-light-green: #00D768;
+  --color-night: #1D212F;
+  --color-gray: #565F67;
+  --color-light-gray: #DEE0E1;
+  --color-cyan: #CCF5E0;
+  --color-blue: #6391FF;
+  --color-dark-blue: #3B6ADB;
+  --color-light-blue: #719BFF;
+
+  --transition: all 300ms ease;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-modificado {
+  width: 100%;
+  background-color: #fd6699;
+  color: var(--color-white);
+}
