@@ -32,6 +32,7 @@ export class RegistrarComponent implements OnInit {
         catchError((error) => {
           let pessoas: Array<any> = new Array();
           pessoas.push({
+            id: 1,
             nome: 'Emily Tatiane da Cunha',
             cpf: '145.257.163-55',
             rg: '18.995.441-3',
@@ -84,7 +85,7 @@ export class RegistrarComponent implements OnInit {
       .subscribe((response: any) => {
         console.log(response);
         if (response) {
-          this.pessoa.push(response);
+          this.pessoas.push(response);
           this.closeForm();
         }
       });

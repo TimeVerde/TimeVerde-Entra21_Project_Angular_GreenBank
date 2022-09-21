@@ -5,6 +5,7 @@
       <th>Nome</th>
       <th>CPF</th>
       <th>Data Nascimento</th>
+      <!-- <th>Email</th> -->
       <th>Ações</th>
     </thead>
     <tbody>
@@ -23,19 +24,114 @@
   </table>
 
   <div class="row">
+    <div class="col"></div>
     <div class="col-4">
-      <button class="btn btn-modificado" type="button">Adicionar</button>
+      <button class="btn btn-modificado" type="button" (click)="openForm()">Adicionar</button>
     </div>
+    <div class="col"></div>
   </div>
 
-  <footer>
-    <hr>
-    <div class="row">
-      <div class="col"></div>
-      <div class="col-5">
-      <div class="btn btn-modificado" (click)="login()">Retornar ao Login</div>
 
-    </div><div class="col"></div></div>
-  </footer>
+    <div class="row pt-2" *ngIf="pessoa" [hidden]="!cadastrando">
+
+      <div class="col">
+
+        <div class="card">
+
+          <div class="card-body">
+            {{pessoa|json}}
+            <div class="row">
+              <div class="col-1">
+
+                <label for="id">Id:</label>
+
+                <input type="text" class="form-control" [(ngModel)]="pessoa.id" placeholder="id" disabled />
+
+              </div>
+
+
+              <div class="col">
+
+                <label for="nome">
+                  <font color="red">*</font> Nome:
+                </label>
+
+                <input type="text" class="form-control" [(ngModel)]="pessoa.nome" required />
+
+              </div>
+
+              <div class="col-2">
+
+                <label for="cpf">CPF:</label>
+
+                <input type="number" class="form-control" [(ngModel)]="pessoa.cpf" />
+
+              </div>
+
+              <div class="col-2">
+
+                <label for="data_nasc">Data de Nascimento:</label>
+
+                <input type="date" class="form-control" [(ngModel)]="pessoa.data_nasc" />
+
+              </div>
+              <div class="col">
+
+                <label for="email">Email:</label>
+
+                <input type="text" class="form-control" [(ngModel)]="pessoa.email" />
+
+              </div>
+              <div class="col">
+
+                <label for="rg">RG:</label>
+
+                <input type="text" class="form-control" [(ngModel)]="pessoa.rg" />
+
+              </div>
+              <div class="col">
+
+                <label for="mae">Nome Mãe:</label>
+
+                <input type="text" class="form-control" [(ngModel)]="pessoa.mae" />
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="card-footer text-center">
+
+            <button [hidden]="pessoa.id" class="btn btn-sm btn-outline-dark m-2" (click)="create()">
+
+              Adicionar
+
+            </button>
+
+            <button [hidden]="!pessoa.id" class="btn btn-sm btn-outline-dark m-2" (click)="update()">
+
+              Atualizar
+
+            </button>
+
+            <button class="btn btn-sm btn-outline-danger m-2" (click)="closeForm()">
+
+              Cancel
+
+            </button>
+
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col-5">
+              <div class="btn btn-modificado mb-2" (click)="login()">Retornar ao Login</div>
+
+            </div>
+            <div class="col"></div>
+          </div>
+
+
 
 </div>
