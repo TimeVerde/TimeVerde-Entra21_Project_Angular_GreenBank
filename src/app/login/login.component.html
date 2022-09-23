@@ -1,87 +1,107 @@
-<!DOCTYPE html>
 
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<body class=''>
 
-    <title>Login Page | GreenBank</title>
-
-    <!-- Css Main -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/style.css" />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-  </head>
-
-  <body class="">
     <div class="parent">
-      <div class="div1">
-        <div class="animateme">
-          <ul class="bg-bubbles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+
+        <div class="div1">
+            <div class="animateme">
+                <ul class="bg-bubbles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
-      </div>
 
-      <div class="div2">
-        <div id="login">
-          <h1>Welcome</h1>
-          <h1>Please</h1>
-          <h1>Login</h1>
+        <div class="div2">
+            <div id="login" *ngIf="true">
 
-          <fieldset>
-            <p>
-              <input
-                name="name"
-                id="name"
-                type="text"
-                required
-                placeholder="Username"
-              />
-            </p>
-            <p><input type="password" required placeholder="Password" /></p>
-            <p><a href="#">Forgot Password?</a></p>
-            <p><input type="submit" value="Login" /></p>
-          </fieldset>
+                <h1>Welcome</h1>
+                <h1>Please</h1>
+                <h1>Login</h1>
 
-          <p><span class="btn-round">or</span></p>
+                <form action="#" method="get">
+                    <fieldset>
+                        <p><input name="name" id="name" type="text" required placeholder="Username"></p>
+                        <p><input type="password" required placeholder="Password"></p>
+                        <p><a href="#">Forgot Password?</a></p>
+                        <p><input type="submit" value="Login"></p>
+                    </fieldset>
+                </form>
 
-          <p>
-            <a class="facebook-before"
-              ><span class="fontawesome-facebook"></span
-            ></a>
-            <button class="facebook">Login Using Facbook</button>
-          </p>
+                <p><span class="btn-round">or</span></p>
+                <p>
+                    <a class="facebook-before"><span class="fontawesome-facebook"></span></a>
+                    <button class="facebook">Login Using Facbook</button>
+                </p>
+                <p>
+                    <a class="twitter-before"><span class="fontawesome-twitter"></span></a>
+                    <button class="twitter">Login Using Twitter</button>
+                </p>
+                <p>
+                    <a class="google-before"><span class="fontawesome-envelope"></span></a>
+                    <button class="google">Login Using Google+</button>
+                </p>
+            </div>
 
-          <p>
-            <a class="twitter-before"
-              ><span class="fontawesome-twitter"></span
-            ></a>
-            <button class="twitter">Login Using Twitter</button>
-          </p>
+            <div id="login" *ngIf="false">
 
-          <p>
-            <a class="google-before"
-              ><span class="fontawesome-envelope"></span
-            ></a>
-            <button class="google">Login Using Google+</button>
-          </p>
+                <h1>Make the Record</h1>
+
+                <form action="#" method="get">
+                    <fieldset>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+                        <p>
+                            <label>First Name</label>
+                            <input name="name" id="name" type="text" required placeholder="Username">
+                        </p>
+
+                    </fieldset>
+                </form>
+            </div>
         </div>
-      </div>
+
     </div>
-  </body>
-</html>
+</body>
+

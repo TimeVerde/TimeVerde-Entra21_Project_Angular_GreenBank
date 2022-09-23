@@ -6,6 +6,7 @@ import { SegurancaService } from './services/seguranca.service';
 
 const routes: Routes = [
   { path: 'registrar', component: RegistrarComponent},
+  {path: 'login', component: LoginComponent},
   { path: '', component: LoginComponent },
 ];
 
