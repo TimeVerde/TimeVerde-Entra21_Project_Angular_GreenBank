@@ -12,11 +12,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SegurancaService implements CanActivate {
-
-  entrou!: boolean;
-
+  logged: boolean = false;
+  username!:string
   constructor(private router: Router) {}
-
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -25,9 +23,9 @@ export class SegurancaService implements CanActivate {
     | UrlTree
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
-      if (!this.entrou) {
-        this.router.navigateByUrl("")
-      }
-      return this.entrou;
+    if (!this.logged) {
+      this.router.navigateByUrl('');
+    }
+    return this.logged;
   }
 }

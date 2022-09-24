@@ -20,11 +20,6 @@ export class RegistrarComponent implements OnInit {
     this.getAll();
   }
 
-  login(): void {
-    this.seguranca.entrou = true;
-    this.router.navigateByUrl("")
-  }
-
   getAll(): void {
     this.pessoaService
       .getAll()
