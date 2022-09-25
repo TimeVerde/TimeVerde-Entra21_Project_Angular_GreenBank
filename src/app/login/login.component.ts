@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
 
         if (response) {
           this.seguranca.logged = response;
-          this.seguranca.username = this.email;
+          this.seguranca.email = this.email;
 
           this.router.navigateByUrl('registrar');
         } else {

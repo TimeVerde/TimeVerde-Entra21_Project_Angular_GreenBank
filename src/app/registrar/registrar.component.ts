@@ -18,6 +18,7 @@ export class RegistrarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAll();
+    this.openForm();
   }
 
   getAll(): void {
@@ -44,14 +45,13 @@ export class RegistrarComponent implements OnInit {
         })
       )
       .subscribe((response) => {
-        console.log(response);
+        console.log("banco de dados está funcionando");
         this.pessoas = response;
       });
   }
 
   openForm(): void {
     this.pessoa = {};
-    this.cadastrando = true;
   }
 
   closeForm(): void {
@@ -65,12 +65,7 @@ export class RegistrarComponent implements OnInit {
   }
 
   create(): void {
-    if (!this.validForm()) {
-      alert('Preencha os campos obrigatorios');
-      return;
-    }
     this.pessoaService
-
       .create(this.pessoa)
       .pipe(
         catchError((error) => {
@@ -81,7 +76,6 @@ export class RegistrarComponent implements OnInit {
         console.log(response);
         if (response) {
           this.pessoas.push(response);
-          this.closeForm();
         }
       });
   }

@@ -29,87 +29,57 @@
 
                   <fieldset>
                       <p>
+                          <input [(ngModel)]="pessoa.id" type="text" disabled>
+                      </p>
+                      <p>
                           <label>Full Name</label>
-                          <input name="name" id="name" type="text" required>
+                          <input [(ngModel)]="pessoa.nome" type="text" required>
                       </p>
                       <p>
                           <label>CPF</label>
-                          <input name="cpf" id="cpf" type="text" required>
+                          <input [(ngModel)]="pessoa.cpf" type="text" required>
                       </p>
                       <p>
                           <label>RG</label>
-                          <input name="rg" id="rg" type="text" required>
+                          <input [(ngModel)]="pessoa.rg" type="text" required>
                       </p>
                       <p>
                           <label>Date of Birth</label>
-                          <input name="date" id="date" type="date" required>
+                          <input [(ngModel)]="pessoa.data_nascimento" type="text" required>
                       </p>
                       <p>
                           <label>Mother</label>
-                          <input name="mother" id="mother" type="text" required>
+                          <input [(ngModel)]="pessoa.mae" type="text" required>
                       </p>
                       <p>
                           <label>Father</label>
-                          <input name="father" id="father" type="text" required>
+                          <input [(ngModel)]="pessoa.pai" type="text" required>
                       </p>
                       <p>
                           <label>CEP</label>
-                          <select name="state">
-                              <option value=" ">Please select your state</option>
-                              <option>Acre (AC)</option>
-                              <option>Alagoas (AL)</option>
-                              <option>Amapá (AP)</option>
-                              <option>Amazonas (AM)</option>
-                              <option>Bahia (BA)</option>
-                              <option>Ceará (CE)</option>
-                              <option>Distrito Federal (DF)</option>
-                              <option>Espírito Santo (ES)</option>
-                              <option>Goiás (GO)</option>
-                              <option>Maranhão (MA)</option>
-                              <option>Mato Grosso (MT)</option>
-                              <option>Mato Grosso do Sul (MS)
-                              <option>Minas Gerais (MG)</option>
-                              <option>Pará (PA)</option>
-                              <option>Paraíba (PB)</option>
-                              <option>Paraná (PR)</option>
-                              <option>Pernambuco (PE)</option>
-                              <option>Piauí (PI)</option>
-                              <option>Rio de Janeiro (RJ)</option>
-                              <option>Rio Grande do Norte (RN)</option>
-                              <option>Rio Grande do Sul (RS)</option>
-                              <option>Rondônia (RO)</option>
-                              <option>Roraima (RR)</option>
-                              <option>Santa Catarina (SC)</option>
-                              <option>São Paulo (SP)</option>
-                              <option>Sergipe (SE)</option>
-                              <option>Tocantins (TO)</option>
-                          </select>
+                          <input [(ngModel)]="pessoa.cep" type="text" required>
                       </p>
                       <p>
                           <label>Adress</label>
-                          <input name="adress" id="adress" type="text" required>
+                          <input [(ngModel)]="pessoa.endereco" type="text" required>
                       </p>
                       <p>
                           <label>Cell Phone</label>
-                          <input name="phone" id="phone" type="text" required>
+                          <input [(ngModel)]="pessoa.celular" type="text" required>
                       </p>
                       <p>
                           <label>E-mail</label>
-                          <input name="email" id="email" type="email" required>
+                          <input [(ngModel)]="pessoa.email" type="text" required>
                       </p>
                       <p>
                           <label>Password</label>
-                          <input name="password" id="password" type="password" required>
+                          <input [(ngModel)]="pessoa.senha" type="text" required>
                       </p>
                       <p>
-                          <label>Confirm Password</label>
-                          <input name="password" id="password" type="password" required>
-                      </p>
-                      <p>
-                          <input name="terms" id="terms" type="checkbox" required>
+                          <input type="checkbox" required>
                           <span>I agree to GreenBank's Terms & Conditions</span>
                       </p>
-                      <p><input type="submit" value="Register"></p>
+                      <p><button type="submit" (click)="create()" value="Register">Register</button></p>
                   </fieldset>
           </div>
       </div>
