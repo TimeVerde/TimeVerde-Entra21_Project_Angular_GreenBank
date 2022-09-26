@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
           this.seguranca.logged = response;
           this.seguranca.email = this.email;
 
-          this.router.navigateByUrl('registrar');
+          this.router.navigateByUrl('clienteInfo');
         } else {
         alert("ERROR 404")
         }
