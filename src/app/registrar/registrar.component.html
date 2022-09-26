@@ -48,15 +48,15 @@
                           <input [(ngModel)]="pessoa.data_nascimento" type="text" required>
                       </p>
                       <p>
-                          <label>Mother</label>
+                          <label>Mother Name</label>
                           <input [(ngModel)]="pessoa.mae" type="text" required>
                       </p>
                       <p>
-                          <label>Father</label>
+                          <label>Father Name</label>
                           <input [(ngModel)]="pessoa.pai" type="text" required>
                       </p>
                       <p>
-                          <label>CEP</label>
+                          <label>ZIP Code</label>
                           <input [(ngModel)]="pessoa.cep" type="text" required>
                       </p>
                       <p>
@@ -79,7 +79,8 @@
                           <input type="checkbox" required>
                           <span>I agree to GreenBank's Terms & Conditions</span>
                       </p>
-                      <p><button type="submit" (click)="create()" value="Register">Register</button></p>
+                      <p class="text-center"><button class="btn btn-lg btn-primary" (click)="create()" value="Register">Register</button></p>
+                      <p class="text-center"><button class="btn btn-lg btn-primary" (click)="login()" value="Register">Back to Login</button></p>
                   </fieldset>
           </div>
       </div>
