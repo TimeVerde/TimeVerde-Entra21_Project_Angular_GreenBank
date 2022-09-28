@@ -23,19 +23,11 @@
   font-family: 'Noto Sans', sans-serif;
 }
 
-/* Designing for scroll-bar */
 ::-webkit-scrollbar {
   width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--color-green);
-  border-radius: 7px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
   background: var(--color-white);
-  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A7CADF;
 }

@@ -133,6 +133,41 @@
 				"description": "Essa requisição serve para atualizar uma pessoa e adicionar ao bando de dados."
 			},
 			"response": []
+		},
+		{
+			"name": "POST Login Pessoa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ricardo_bruno@resource.com.br\",\r\n    \"senha\": \"CWfZORiSn4\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"login"
+					]
+				},
+				"description": "Validando credencias de Pessoa."
+			},
+			"response": []
 		}
 	]
 }
