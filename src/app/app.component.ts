@@ -12,11 +12,15 @@ export class AppComponent {
   title = 'GreenBank';
   links!: Array<any>;
   nome: string = ""
+  aparece!:boolean
 
   constructor(public seguranca: SegurancaService, private router: Router) {}
 
   ngOnInit(): void {
-    this.links = new Array();
+      this.aparece=true
+        this.links = new Array();
+
+
         this.links.push(
       {
         rota: "clienteInfo",
@@ -85,10 +89,19 @@ export class AppComponent {
 
       }
     )
+
   }
 
   sair() : void {
     this.seguranca.logged = false
     this.router.navigateByUrl("")
   }
+
+
+
+alterar(){
+
+  this.aparece = !this.aparece
+
+}
 }

@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteInfoComponent implements OnInit {
 
+  aparece!:boolean
+
   constructor() { }
 
   ngOnInit(): void {
+
+    this.aparece=false
+  }
+
+  alterar(){
+
+    this.aparece = !this.aparece
+
   }
 
 }
