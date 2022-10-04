@@ -42,13 +42,13 @@ export class LoginComponent implements OnInit {
 
           this.router.navigateByUrl('clienteInfo');
         } else {
-        alert("ERROR 404")
+        alert("Usuário/Senha não encontrado")
         }
       });
   }
 
   forgotPassword(): void {
-    console.log('forgotPassword');
+    console.log('forgotPassword -> Boa sorte :)');
   }
 
   register(): void {

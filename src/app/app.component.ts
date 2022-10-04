@@ -52,7 +52,7 @@ export class AppComponent {
 
     this.links.push(
       {
-        rota: "clienteTransferencia",
+        rota: "clienteTransfer",
         textContent: "Transferência Green",
         class_a: "menu__item",
         class_i:"fa fa-solid fa-money-bill-transfer"
@@ -62,7 +62,7 @@ export class AppComponent {
 
     this.links.push(
       {
-        rota: "clientePIX",
+        rota: "clientePix",
         textContent: "PIX",
         class_a: "menu__item",
         class_i:"fa fa-solid fa-hand-holding-dollar"
