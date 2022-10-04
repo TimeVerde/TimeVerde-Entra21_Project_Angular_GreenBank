@@ -83,7 +83,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"nome\":\"Cauê Sebastião Martin Santos\",\r\n\"cpf\":\"893.070.262-70\",\r\n\"rg\":\"28.900.641-7\",\r\n\"data_nascimento\":\"02/06/1948\",\r\n\"mae\":\"Esther Yasmin\",\r\n\"pai\":\"José Cláudio Kevin Santos\",\r\n\"cep\":\"64207-408\",\r\n\"endereco\":\"Rua Bernardo Antonio Saraiva\",\r\n\"celular\":\"(86) 99368-0268\",\r\n\"senha\":\"5Laiq86szn\",\r\n\"email\":\"cauesebastiaosantos@reconciliare.com.br\"\r\n}"
+					"raw": "{\r\n\"nome\": \"Iago Ricardo Dias\",\r\n\"idade\": \"26\",\r\n\"cpf\": \"174.385.733-03\",\r\n\"rg\": \"30.601.472-5\",\r\n\"dataNascimento\": \"04/05/1996\",\r\n\"sexo\": \"M\",\r\n\"mae\": \"Rebeca Sandra\",\r\n\"pai\": \"Pedro Henrique Enzo Leandro Dias\",\r\n\"cep\": \"64090-145\",\r\n\"endereco\": \"Rua Estudante Deilane Raquel Silva\",\r\n\"numero\": \"973\",\r\n\"bairro\": \"Gurupi\",\r\n\"cidade\": \"Teresina\",\r\n\"estado\": \"PI\",\r\n\"celular\": \"(86) 99219-6272\",\r\n\"email\": \"iago.ricardo.dias@atualecomex.com.br\",\r\n\"senha\": \"k0820FtL6w\",\r\n\"conta_corrente\": \"0480426-0\",\r\n\"agencia\": \"3182\"\r\n}"
 				},
 				"url": {
 					"raw": "localhost:8080/pessoas",
@@ -135,7 +135,7 @@
 			"response": []
 		},
 		{
-			"name": "POST Login Pessoa",
+			"name": "POST Login Usuario",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -152,7 +152,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"ricardo_bruno@resource.com.br\",\r\n    \"senha\": \"CWfZORiSn4\"\r\n}"
+					"raw": "{\r\n    \"email\": \"iago.ricardo.dias@atualecomex.com.br\",\r\n    \"senha\": \"k0820FtL6w\"\r\n}"
 				},
 				"url": {
 					"raw": "localhost:8080/pessoas/login",
@@ -165,7 +165,7 @@
 						"login"
 					]
 				},
-				"description": "Validando credencias de Pessoa."
+				"description": "Validação de um usúario através do banco de dados."
 			},
 			"response": []
 		}

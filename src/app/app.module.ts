@@ -16,12 +16,14 @@ import { ClientePixComponent } from './cliente/cliente-pix/cliente-pix.component
 import { ClienteSaldoComponent } from './cliente/cliente-saldo/cliente-saldo.component';
 import { ClienteInvestimentosComponent } from './cliente/cliente-investimentos/cliente-investimentos.component';
 import { ClienteModule } from './cliente/cliente.module';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrarComponent,
+    AdminComponent,
 
   ],
   imports: [
