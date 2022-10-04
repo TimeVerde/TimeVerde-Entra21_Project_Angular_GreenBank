@@ -2,120 +2,122 @@
 
   <div class="parent">
 
-      <div class="div1">
-          <div class="animateme">
-              <ul class="bg-bubbles">
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-              </ul>
-          </div>
+    <div class="div1">
+      <div class="animateme">
+        <ul class="bg-bubbles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
+    </div>
 
-      <div class="div2">
-          <div id="register">
+    <div class="div2">
+      <div id="register">
 
-              <h1>Make the Record</h1>
+        <h1>Create your account</h1>
 
-                  <fieldset>
-                      <p>
-                          <input [(ngModel)]="pessoa.id" type="text" disabled>
-                      </p>
-                      <p>
-                          <label>Full Name</label>
-                          <input [(ngModel)]="pessoa.nome" type="text" required>
-                      </p>
-                      <p>
-                          <label>Age</label>
-                          <input [(ngModel)]="pessoa.idade" type="text" required>
-                      </p>
-                      <p>
-                          <label>CPF</label>
-                          <input [(ngModel)]="pessoa.cpf" type="text" required>
-                      </p>
-                      <p>
-                          <label>RG</label>
-                          <input [(ngModel)]="pessoa.rg" type="text" required>
-                      </p>
-                      <p>
-                          <label>Date of Birth</label>
-                          <input [(ngModel)]="pessoa.data_nascimento" type="text" required>
-                      </p>
-                      <p>
-                          <label>Gender</label>
-                          <input [(ngModel)]="pessoa.sexo" type="text" required>
-                      </p>
-                      <p>
-                          <label>Mother Name</label>
-                          <input [(ngModel)]="pessoa.mae" type="text" required>
-                      </p>
-                      <p>
-                          <label>Father Name</label>
-                          <input [(ngModel)]="pessoa.pai" type="text" required>
-                      </p>
-                      <p>
-                          <label>ZIP Code</label>
-                          <input [(ngModel)]="pessoa.cep" type="text" required>
-                      </p>
-                      <p>
-                          <label>Adress</label>
-                          <input [(ngModel)]="pessoa.endereco" type="text" required>
-                      </p>
-                      <p>
-                          <label>Number</label>
-                          <input [(ngModel)]="pessoa.numero" type="text" required>
-                      </p>
-                      <p>
-                          <label>District</label>
-                          <input [(ngModel)]="pessoa.bairro" type="text" required>
-                      </p>
-                      <p>
-                          <label>City</label>
-                          <input [(ngModel)]="pessoa.cidade" type="text" required>
-                      </p>
-                      <p>
-                          <label>State</label>
-                          <input [(ngModel)]="pessoa.estado" type="text" required>
-                      </p>
-                      <p>
-                          <label>Cell Phone</label>
-                          <input [(ngModel)]="pessoa.celular" type="text" required>
-                      </p>
-                      <p>
-                          <label>E-mail</label>
-                          <input [(ngModel)]="pessoa.email" type="text" required>
-                      </p>
-                      <p>
-                          <label>Password</label>
-                          <input [(ngModel)]="pessoa.senha" type="text" required>
-                      </p>
-                      <p>
-                          <label>Checking Account</label>
-                          <input [(ngModel)]="pessoa.conta_corrente" type="text" required>
-                      </p>
-                      <p>
-                          <label>Agency</label>
-                          <input [(ngModel)]="pessoa.agencia" type="text" required>
-                      </p>
-                      <p>
-                          <input type="checkbox" required>
-                          <span>I agree to GreenBank's Terms & Conditions</span>
-                      </p>
-                      <p class="text-center"><button class="btn btn-lg btn-primary" (click)="create()" value="Register">Register</button></p>
-                      <p class="text-center"><button class="btn btn-lg btn-primary" (click)="login()" value="Register">Back to Login</button></p>
-                  </fieldset>
-          </div>
+        <fieldset>
+          <!-- <p>
+            <input [(ngModel)]="pessoa.id" type="text" disabled>
+          </p> -->
+          <p>
+            <label>Full Name</label>
+            <input [(ngModel)]="pessoa.nome" type="text" required>
+          </p>
+          <p>
+            <label>Age</label>
+            <input [(ngModel)]="pessoa.idade" type="text" required>
+          </p>
+          <p>
+            <label>CPF</label>
+            <input [(ngModel)]="pessoa.cpf" type="text" required>
+          </p>
+          <p>
+            <label>RG</label>
+            <input [(ngModel)]="pessoa.rg" type="text" required>
+          </p>
+          <p>
+            <label>Date of Birth</label>
+            <input [(ngModel)]="pessoa.data_nascimento" type="text" required>
+          </p>
+          <p>
+            <label>Gender</label>
+            <input [(ngModel)]="pessoa.sexo" type="text" required>
+          </p>
+          <p>
+            <label>Mother Name</label>
+            <input [(ngModel)]="pessoa.mae" type="text" required>
+          </p>
+          <p>
+            <label>Father Name</label>
+            <input [(ngModel)]="pessoa.pai" type="text" required>
+          </p>
+          <p>
+            <label>ZIP Code</label>
+            <input [(ngModel)]="pessoa.cep" type="text" required>
+          </p>
+          <p>
+            <label>Adress</label>
+            <input [(ngModel)]="pessoa.endereco" type="text" required>
+          </p>
+          <p>
+            <label>Number</label>
+            <input [(ngModel)]="pessoa.numero" type="text" required>
+          </p>
+          <p>
+            <label>District</label>
+            <input [(ngModel)]="pessoa.bairro" type="text" required>
+          </p>
+          <p>
+            <label>City</label>
+            <input [(ngModel)]="pessoa.cidade" type="text" required>
+          </p>
+          <p>
+            <label>State</label>
+            <input [(ngModel)]="pessoa.estado" type="text" required>
+          </p>
+          <p>
+            <label>Cell Phone</label>
+            <input [(ngModel)]="pessoa.celular" type="text" required>
+          </p>
+          <p>
+            <label>E-mail</label>
+            <input [(ngModel)]="pessoa.email" type="text" required>
+          </p>
+          <p>
+            <label>Password</label>
+            <input [(ngModel)]="pessoa.senha" type="text" required>
+          </p>
+          <p>
+            <label>Checking Account</label>
+            <input [(ngModel)]="pessoa.conta_corrente" type="text" required>
+          </p>
+          <p>
+            <label>Agency</label>
+            <input [(ngModel)]="pessoa.agencia" type="text" required>
+          </p>
+          <p>
+            <input type="checkbox" required>
+            <span>I agree to GreenBank's Terms & Conditions</span>
+          </p>
+          <p class="text-center"><button class="btn btn-lg btn-primary" (click)="create()"
+              value="Register">Register</button></p>
+          <p class="text-center"><button class="btn btn-lg btn-primary" (click)="login()" value="Register">Back to
+              Login</button></p>
+        </fieldset>
       </div>
+    </div>
   </div>
 
 </body>
