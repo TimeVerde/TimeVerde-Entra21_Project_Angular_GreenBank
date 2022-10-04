@@ -34,9 +34,11 @@
           <p><input [(ngModel)]="email" name="name" id="name" type="text" required placeholder="E-mail"></p>
           <p><input [(ngModel)]="password" type="password" required placeholder="Password"></p>
           <p><a (click)="forgotPassword()">Forgot Password?</a></p>
-          <p><input type="submit" (click)="login()" value="Login"></p>
-          <p><span class="btn-round">or</span></p>
-          <p><input type="submit" (click)="register()" value="Register"></p>
+          <p>
+            <input type="submit" (click)="login()" value="Login">
+            <span class="btn-round">or</span>
+            <input type="submit" (click)="register()" value="Register">
+          </p>
           <br><br>
           <p><input type="submit" value="Conheça o GreenCollab"></p>
         </fieldset>
