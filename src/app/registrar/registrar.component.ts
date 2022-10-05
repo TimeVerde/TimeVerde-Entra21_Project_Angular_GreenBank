@@ -54,11 +54,6 @@ export class RegistrarComponent implements OnInit {
     this.pessoa = {};
   }
 
-  closeForm(): void {
-    this.pessoa = {};
-    this.cadastrando = false;
-  }
-
   updateForm(pessoa: any): void {
     this.pessoa = pessoa;
     this.cadastrando = true;
@@ -107,7 +102,6 @@ export class RegistrarComponent implements OnInit {
         console.log(response);
         if (response) {
           this.pessoas[this.pessoas.indexOf(this.pessoa)] = response;
-          this.closeForm();
         }
       });
   }
