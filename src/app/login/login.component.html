@@ -33,9 +33,11 @@
         <fieldset>
           <p><input [(ngModel)]="email" name="name" id="name" type="text" required placeholder="E-mail"></p>
           <p><input [(ngModel)]="password" type="password" required placeholder="Password"></p>
+          <p class="text-center"><span *ngIf='mensagem != ""' class="alert alert-danger mt-2 text-center">{{ mensagem }}</span></p>
           <p><a (click)="forgotPassword()">Forgot Password?</a></p>
           <p>
             <input type="submit" (click)="login()" value="Login">
+
             <span class="btn-round">or</span>
             <input type="submit" (click)="register()" value="Register">
           </p>

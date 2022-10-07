@@ -12,13 +12,25 @@ import { UsuarioService } from '../services/usuario.service';
 export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
+  mensagem: string='';
   constructor(
     private seguranca: SegurancaService,
     private usuarioService: UsuarioService,
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    console.groupCollapsed('%c Seja bem-vindo ao GreenBank', 'color:green; font-weight:bold; text-shadow: 0 0 1em white;font-size: 24px')
+    console.group("Nossos Integrantes:")
+    console.table({'Arthur Estevan': 'https://www.linkedin.com/in/arthurestevanvargas/', 'Rafael Macedo': 'https://www.linkedin.com/in/rmcedo/', 'Thabata Santos': "https://www.linkedin.com/in/thabatasantos/"});
+    console.groupEnd();
+
+
+    console.groupEnd();
+
+
+  }
 
   login(): void {
     this.usuarioService
@@ -42,13 +54,18 @@ export class LoginComponent implements OnInit {
 
           this.router.navigateByUrl('clienteInfo');
         } else {
-        alert("Usuário/Senha não encontrado")
+          this.mensagem="Usuário/Senha não encontrado"
         }
       });
+
   }
 
   forgotPassword(): void {
-    console.log('forgotPassword -> Boa sorte :)');
+
+    console.group('Entre em nosso sistema');
+    console.log('%c Olá, Sr. Cliente. Obrigado por adquirir o serviço do GreenBank. E como forma de agradecimento, oferecemos um acesso livre ao projeto. Para aproveitar isso, copie e cole o código abaixo: drB9Mkt5DH9VcBjTpQF9X-my06RgIwriYPYQK21YihtQTsROkACdhg663FkkstKgRZy8DtIKoo0sn2rwqvZsLw. Depois vá até https://www.invertexto.com/texto-criptografado, insira o código em "decodificar". Você recebera um acesso ao serviço, aproveite que é por tempo limitado. Grande abraço.','font-size:24px;color: grey;')
+    console.groupEnd();
+
   }
 
   register(): void {
