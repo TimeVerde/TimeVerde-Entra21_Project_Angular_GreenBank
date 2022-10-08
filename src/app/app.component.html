@@ -1,28 +1,31 @@
-<div [ngClass]="{'wrapper': seguranca.logged}">
-  <main [ngClass]="{'scroll-bar': seguranca.logged}">
-    <router-outlet></router-outlet>
-  </main>
-  <aside [hidden]="!seguranca.logged">
-    <div class="avatar">
-      <div class="avatar__name">NOME CLIENTE</div>
-      <div class="avatar__img">
-        <img src="https://picsum.photos/70" alt="avatar">
+<div class="fundo">
+  <div [ngClass]="{'wrapper': seguranca.logged}">
+    <main [ngClass]="{'scroll-bar': seguranca.logged}">
+      <router-outlet></router-outlet>
+    </main>
+    <aside [hidden]="!seguranca.logged">
+      <div class="avatar">
+        <div class="avatar__name">NOME CLIENTE</div>
+        <div class="avatar__img">
+          <img src="https://picsum.photos/70" alt="avatar">
+        </div>
       </div>
-    </div>
 
-    <nav class="menu fw-bolder pt-4">
-      <a *ngFor="let link of links" [class]="link.class_a" [routerLink]="link.rota">
-        <i style="font-size: 18px" [class]="link.class_i"></i>
-        <span [class]="link.class_span"> {{ link.textContent }} </span>
-      </a>
+      <nav class="menu fw-bolder pt-4">
+        <a *ngFor="let link of links" [class]="link.class_a" [routerLink]="link.rota">
+          <i style="font-size: 18px" [class]="link.class_i"></i>
+          <span [class]="link.class_span"> {{ link.textContent }} </span>
+        </a>
 
-      <a class="menu__item" (click)="sair()">
-        <i class="menu__icon fa fa-share"></i>
-        <span style="font-size: 12px" class="menu__text fw-bolder">Sair</span>
-      </a>
-    </nav>
+        <a class="menu__item" (click)="sair()">
+          <i class="menu__icon fa fa-share"></i>
+          <span style="font-size: 12px" class="menu__text fw-bolder">Sair</span>
+        </a>
+      </nav>
 
-  </aside>
+    </aside>
+
+  </div>
+
 
 </div>
-

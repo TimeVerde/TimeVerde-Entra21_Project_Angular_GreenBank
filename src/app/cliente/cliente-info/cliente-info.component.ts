@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-cliente-info',
@@ -8,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class ClienteInfoComponent implements OnInit {
 
   aparece!:boolean
+  nome: string = ""
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) {
+
+    }
 
   ngOnInit(): void {
 

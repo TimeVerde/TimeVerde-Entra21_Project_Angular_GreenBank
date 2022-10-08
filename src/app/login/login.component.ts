@@ -21,13 +21,21 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
 
+
     console.groupCollapsed('%c Seja bem-vindo ao GreenBank', 'color:green; font-weight:bold; text-shadow: 0 0 1em white;font-size: 24px')
     console.group("Nossos Integrantes:")
-    console.table({'Arthur Estevan': 'https://www.linkedin.com/in/arthurestevanvargas/', 'Rafael Macedo': 'https://www.linkedin.com/in/rmcedo/', 'Thabata Santos': "https://www.linkedin.com/in/thabatasantos/"});
-    console.groupEnd();
+    console.table([
+
+    {Nome:'Arthur Estevan', Linkedin:'https://www.linkedin.com/in/arthurestevanvargas/'},
+    {Nome:'Rafael Macedo', Linkedin:'https://www.linkedin.com/in/rmcedo/'},
+    {Nome:'Thabata Santos', Linkedin:"https://www.linkedin.com/in/thabatasantos/"}
+    ]);
 
 
-    console.groupEnd();
+
+
+
+
 
 
   }
