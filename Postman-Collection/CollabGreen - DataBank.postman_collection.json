@@ -1,11 +1,263 @@
 {
 	"info": {
-		"_postman_id": "3d94df88-63a8-4fde-86bb-116d57bdf859",
+		"_postman_id": "ff71cb45-de03-41c3-b500-bb4c8853c646",
 		"name": "CollabGreen - DataBank",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "23249649"
 	},
 	"item": [
+		{
+			"name": "Operações Báncarias",
+			"item": [
+				{
+					"name": "PUT Pessoa Deposito",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"saldo\": 100\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/pessoas/deposito/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"deposito",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Pessoa Sacar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"saldo\": 20\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/pessoas/sacar/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"sacar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Pessoa Transferir",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"saldo\": 70\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/pessoas/transferencia/1/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"transferencia",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Pessoa Saldo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pessoas/saldo/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"saldo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Procurando Informações",
+			"item": [
+				{
+					"name": "findByPai",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"pai\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/pessoas/pai_presente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"pai_presente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByEstado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pessoas/estado/{estado}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"estado",
+								"{estado}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByAgeBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pessoas/idadeentre/18/30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"idadeentre",
+								"18",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Criação de Conteúdo",
+			"item": [
+				{
+					"name": "POST AboutUs Created",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Thabata Santos\",\r\n    \"github\": \"https://github.com/ThataSantos\",\r\n    \"linkedin\": \"www.linkedin.com/in/thabatasantos\",\r\n    \"image\": \"https://avatars.githubusercontent.com/u/100490750?s=96&v=4\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/aboutus",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aboutus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 		{
 			"name": "GET List-All Pessoas",
 			"request": {
@@ -100,7 +352,7 @@
 			"response": []
 		},
 		{
-			"name": "POST Pessoa Created Copy",
+			"name": "PUT Pessoa Update",
 			"request": {
 				"method": "PUT",
 				"header": [

@@ -89,7 +89,6 @@ export class AppComponent {
 
       }
     )
-
   }
 
   sair() : void {

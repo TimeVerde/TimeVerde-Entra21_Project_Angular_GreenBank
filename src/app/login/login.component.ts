@@ -30,14 +30,6 @@ export class LoginComponent implements OnInit {
     {Nome:'Rafael Macedo', Linkedin:'https://www.linkedin.com/in/rmcedo/'},
     {Nome:'Thabata Santos', Linkedin:"https://www.linkedin.com/in/thabatasantos/"}
     ]);
-
-
-
-
-
-
-
-
   }
 
   login(): void {
@@ -71,7 +63,7 @@ export class LoginComponent implements OnInit {
   forgotPassword(): void {
 
     console.group('Entre em nosso sistema');
-    console.log('%c Olá, Sr. Cliente. Obrigado por adquirir o serviço do GreenBank. E como forma de agradecimento, oferecemos um acesso livre ao projeto. Para aproveitar isso, copie e cole o código abaixo: drB9Mkt5DH9VcBjTpQF9X-my06RgIwriYPYQK21YihtQTsROkACdhg663FkkstKgRZy8DtIKoo0sn2rwqvZsLw. Depois vá até https://www.invertexto.com/texto-criptografado, insira o código em "decodificar". Você recebera um acesso ao serviço, aproveite que é por tempo limitado. Grande abraço.','font-size:24px;color: grey;')
+    console.log('%c Olá, Sr. Cliente. Obrigado por adquirir o serviço do GreenBank. E como forma de agradecimento, oferecemos um acesso livre ao projeto. Para aproveitar isso, copie e cole o código abaixo: vVh8NuE-2Q0xYKS86439zREZ-_OxQAFX_XFCyaZCs7BbKN3CHv0bp9bRPBvUQXWl. Depois vá até https://www.invertexto.com/texto-criptografado, insira o código em "decodificar". Você recebera um acesso ao serviço, aproveite que é por tempo limitado. Grande abraço.','font-size:24px;color: grey;')
     console.groupEnd();
 
   }

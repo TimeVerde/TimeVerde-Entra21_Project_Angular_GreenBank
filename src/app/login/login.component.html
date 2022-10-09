@@ -33,11 +33,11 @@
         <fieldset>
           <p><input [(ngModel)]="email" name="name" id="name" type="text" required placeholder="E-mail"></p>
           <p><input [(ngModel)]="password" type="password" required placeholder="Password"></p>
-          <p class="text-center"><span *ngIf='mensagem != ""' class="alert alert-danger mt-2 text-center">{{ mensagem }}</span></p>
-          <p><a (click)="forgotPassword()">Forgot Password?</a></p>
+          <p class=""><span *ngIf='mensagem != ""' class="alert alert-danger p-2 mt-2 text-center">{{ mensagem }}</span></p>
+          <p><a (click)="forgotPassword()" style="cursor: pointer; font-size: 14px;">Forgot Password?</a></p>
           <p>
             <input type="submit" (click)="login()" value="Login">
-            <p>Ainda não é cliente? <a style="font-size: 18px; color:#565F67;" (click)="register()">Cadastre-se</a></p>
+            <p>Ainda não é cliente? <a style="font-size: 14px; color:#565F67; cursor: pointer;" (click)="register()">Cadastre-se</a></p>
 
           <br><br>
           <p><input type="submit" value="Conheça o GreenCollab"></p>

@@ -3,39 +3,43 @@
 
 /* ---------- FONTAWESOME ---------- */
 [class*="fontawesome-"]:before {
-    font-family: 'FontAwesome', sans-serif;
+  font-family: 'FontAwesome', sans-serif;
 }
 
 /* ---------- START CONFIG ---------- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    outline: none;
-    border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    background: #f4f4f4;
-    color: #5a5656;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.5;
-    margin: 0;
-    place-items: center;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  color: #5a5656;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  place-items: center;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  cursor: default;
 }
 
 h1,
@@ -43,69 +47,70 @@ h2,
 h3,
 h4,
 h5 {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 h1 {
-    font-size: 3.8rem;
+  cursor: default;
+  font-size: 3.8rem;
 }
 
 h2 {
-    font-size: 2.6rem;
+  font-size: 2.6rem;
 }
 
 h3 {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 h4 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 h5 {
-    font-size: 0.86rem;
+  font-size: 0.86rem;
 }
 
 p {
-    line-height: 1.8;
+  line-height: 1.8;
 }
 
 /* =============================== START OF GRID =============================== */
 
 .parent {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 100%;
-    height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .div1 {
-    grid-area: 1 / 1 / 6 / 13;
-    width: 100%;
-    height: 100%;
-    background: url(../../assets/building.jpg) no-repeat center;
-    background-size: cover;
+  grid-area: 1 / 1 / 6 / 13;
+  width: 100%;
+  height: 100%;
+  background: url(../../assets/building.jpg) no-repeat center;
+  background-size: cover;
 }
 
 .div2 {
-    grid-area: 1 / 8 / 6 / 13;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    /* border-radius: 50px 0px 0px 50px; */
-    padding: 60px;
-    z-index: 1;
+  grid-area: 1 / 8 / 6 / 13;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  /* border-radius: 50px 0px 0px 50px; */
+  padding: 60px;
+  z-index: 1;
 }
 
 .div2 {
-    background-image: url(../../assets/pessoa.png);
-    background-repeat: no-repeat;
-    background-size: 500px;
-    background-attachment: fixed;
-    background-position: 115% 100%;
+  background-image: url(../../assets/pessoa.png);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-attachment: fixed;
+  background-position: 115% 100%;
 }
 
 /* =============================== END OF GRID =============================== */
@@ -114,87 +119,87 @@ p {
 
 /* ---------- GENERAL ---------- */
 p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* ---------- LOGIN ---------- */
 #login {
-    margin: 30px;
-    width: 300px;
+  margin: 30px;
+  width: 300px;
 
 
 }
 
 form {
-    margin: 0;
-    padding: 0;
-    width: auto;
+  margin: 0;
+  padding: 0;
+  width: auto;
 }
 
 /* ---------- INPUT ---------- */
 fieldset input[type="text"],
 input[type="password"] {
-    margin-top: 1rem;
-    appearance: none;
-    background: #e5e5e5;
-    border: none;
-    border-radius: 3px;
-    color: #5a5656;
-    font-family: inherit;
-    font-size: 14px;
-    height: 50px;
-    outline: none;
-    padding: 0px 10px;
-    width: 100%;
+  margin-top: 1rem;
+  appearance: none;
+  background: #e5e5e5;
+  border: none;
+  border-radius: 3px;
+  color: #5a5656;
+  font-family: inherit;
+  font-size: 14px;
+  height: 50px;
+  outline: none;
+  padding: 0px 10px;
+  width: 100%;
 }
 
 fieldset input[type="text"]:focus {
-    border: 2px solid #008dde;
+  border: 2px solid #008dde;
 }
 
 fieldset input[type="password"]:focus {
-    border: 2px solid #008dde;
+  border: 2px solid #008dde;
 }
 
 fieldset input[type="submit"] {
-    appearance: none;
-    background-color: #008dde;
-    border: none;
-    border-radius: 3px;
-    color: #f4f4f4;
-    cursor: pointer;
-    font-family: inherit;
-    height: 50px;
-    text-transform: uppercase;
-    width: 300px;
+  appearance: none;
+  background-color: #008dde;
+  border: none;
+  border-radius: 3px;
+  color: #f4f4f4;
+  cursor: pointer;
+  font-family: inherit;
+  height: 50px;
+  text-transform: uppercase;
+  width: 300px;
 }
 
 fieldset a {
-    color: #5a5656;
-    font-size: 12px;
+  color: #5a5656;
+  font-size: 12px;
 }
 
 fieldset a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* ---------- BUTTON ---------- */
 .btn-round {
-    background: #5a5656;
-    border-radius: 50%;
-    color: #f4f4f4;
-    display: block;
-    font-size: 12px;
-    height: 50px;
-    line-height: 50px;
-    margin: 30px 125px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 50px;
+  background: #5a5656;
+  border-radius: 50%;
+  color: #f4f4f4;
+  display: block;
+  font-size: 12px;
+  height: 50px;
+  line-height: 50px;
+  margin: 30px 125px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 50px;
 }
 
 
@@ -203,192 +208,192 @@ fieldset a:hover {
 /* =============================== START OF ANIMATE =============================== */
 
 .animateme {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .bg-bubbles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .bg-bubbles li {
-    position: absolute;
-    list-style: none;
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: #EFFBFF;
-    bottom: 60px;
-    -webkit-animation: square 25s infinite;
-    animation: square 25s infinite;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear;
-    opacity: 0;
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #EFFBFF;
+  bottom: 60px;
+  -webkit-animation: square 25s infinite;
+  animation: square 25s infinite;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  opacity: 0;
 }
 
 .bg-bubbles li:nth-child(1) {
-    left: 3%;
-    border-radius: 50em;
-    background: transparent;
-    border: 4px solid #EFFBFF;
+  left: 3%;
+  border-radius: 50em;
+  background: transparent;
+  border: 4px solid #EFFBFF;
 }
 
 .bg-bubbles li:nth-child(2) {
-    left: 6%;
-    width: 75px;
-    height: 75px;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-duration: 17s;
-    animation-duration: 17s;
+  left: 6%;
+  width: 75px;
+  height: 75px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 17s;
+  animation-duration: 17s;
 }
 
 .bg-bubbles li:nth-child(3) {
-    left: 15%;
-    width: 175px;
-    height: 175px;
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
+  left: 15%;
+  width: 175px;
+  height: 175px;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
 }
 
 .bg-bubbles li:nth-child(4) {
-    left: 40%;
-    width: 90px;
-    height: 90px;
-    -webkit-animation-duration: 22s;
-    animation-duration: 22s;
+  left: 40%;
+  width: 90px;
+  height: 90px;
+  -webkit-animation-duration: 22s;
+  animation-duration: 22s;
 }
 
 .bg-bubbles li:nth-child(5) {
-    left: 70%;
-    background: transparent;
-    border: 4px solid #EFFBFF;
+  left: 70%;
+  background: transparent;
+  border: 4px solid #EFFBFF;
 }
 
 .bg-bubbles li:nth-child(6) {
-    left: 90%;
-    width: 90px;
-    height: 90px;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
-    border-radius: 50em;
-    background: transparent;
-    border: 4px solid #EFFBFF;
+  left: 90%;
+  width: 90px;
+  height: 90px;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  border-radius: 50em;
+  background: transparent;
+  border: 4px solid #EFFBFF;
 }
 
 .bg-bubbles li:nth-child(7) {
-    left: 32%;
-    width: 60px;
-    height: 60px;
-    -webkit-animation-delay: 7s;
-    animation-delay: 7s;
-    background: transparent;
-    border: 4px solid #EFFBFF;
+  left: 32%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+  background: transparent;
+  border: 4px solid #EFFBFF;
 }
 
 .bg-bubbles li:nth-child(8) {
-    left: 55%;
-    width: 50px;
-    height: 50px;
-    -webkit-animation-delay: 15s;
-    animation-delay: 15s;
-    -webkit-animation-duration: 40s;
-    animation-duration: 40s;
+  left: 55%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation-delay: 15s;
+  animation-delay: 15s;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
 }
 
 .bg-bubbles li:nth-child(9) {
-    left: 30%;
-    width: 140px;
-    height: 140px;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-duration: 40s;
-    animation-duration: 40s;
-    border-radius: 50em;
-    background: transparent;
-    border: 4px solid #EFFBFF;
+  left: 30%;
+  width: 140px;
+  height: 140px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+  border-radius: 50em;
+  background: transparent;
+  border: 4px solid #EFFBFF;
 }
 
 .bg-bubbles li:nth-child(10) {
-    left: 90%;
-    width: 60px;
-    height: 60px;
-    -webkit-animation-delay: 11s;
-    animation-delay: 11s;
+  left: 90%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-delay: 11s;
+  animation-delay: 11s;
 }
 
 .bg-bubbles li:nth-child(11) {
-    left: 10%;
-    width: 40px;
-    height: 40px;
-    -webkit-animation-delay: 13s;
-    animation-delay: 13s;
-    border-radius: 50em;
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  -webkit-animation-delay: 13s;
+  animation-delay: 13s;
+  border-radius: 50em;
 }
 
 .bg-bubbles li:nth-child(12) {
-    left: 55%;
-    width: 175px;
-    height: 175px;
-    -webkit-animation-delay: 7s;
-    animation-delay: 7s;
-    background: transparent;
-    border: 4px solid #EFFBFF;
+  left: 55%;
+  width: 175px;
+  height: 175px;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+  background: transparent;
+  border: 4px solid #EFFBFF;
 }
 
 .bg-bubbles li:nth-child(13) {
-    left: 65%;
-    width: 100px;
-    height: 100px;
-    -webkit-animation-delay: 8s;
-    animation-delay: 8s;
-    border-radius: 50em;
+  left: 65%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+  border-radius: 50em;
 }
 
 @-webkit-keyframes square {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 0;
-    }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 0;
+  }
 
-    50% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    100% {
-        -webkit-transform: translateY(-700px) rotate(600deg);
-        transform: translateY(-700px) rotate(600deg);
-        opacity: 1;
-    }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+    transform: translateY(-700px) rotate(600deg);
+    opacity: 1;
+  }
 }
 
 @keyframes square {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 0;
-    }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 0;
+  }
 
-    50% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    100% {
-        -webkit-transform: translateY(-700px) rotate(600deg);
-        transform: translateY(-700px) rotate(600deg);
-        opacity: 0;
-    }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+    transform: translateY(-700px) rotate(600deg);
+    opacity: 0;
+  }
 }
 
 /* =============================== END OF ANIMATE =============================== */
@@ -397,95 +402,95 @@ fieldset a:hover {
 /* =============================== RESPONSIVE =============================== */
 @media screen and (max-width: 1364px) {
 
-    h1 {
-        font-size: 2.2rem;
-    }
+  h1 {
+    font-size: 2.2rem;
+  }
 
-    h2 {
-        font-size: 1.6rem;
-    }
+  h2 {
+    font-size: 1.6rem;
+  }
 
-    h3 {
-        font-size: 1.2rem;
-    }
+  h3 {
+    font-size: 1.2rem;
+  }
 
-    h4 {
-        font-size: 1rem;
-    }
+  h4 {
+    font-size: 1rem;
+  }
 
-    h5 {
-        font-size: 0.68rem;
-    }
+  h5 {
+    font-size: 0.68rem;
+  }
 
-    .parent {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        width: 100%;
-        height: auto;
-    }
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    height: auto;
+  }
 
-    .div2 {
-        background-image: url(/assets/pessoa.png);
-        background-repeat: no-repeat;
-        background-size: 500px;
-        background-attachment: fixed;
-        background-position: 125% -150%;
-        padding: 60px 60px 60px 30px;
-    }
+  .div2 {
+    background-image: url(/assets/pessoa.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-attachment: fixed;
+    background-position: 125% -150%;
+    padding: 60px 60px 60px 30px;
+  }
 
-    #login {
-        margin: 0 auto;
-        width: 300px;
-    }
+  #login {
+    margin: 0 auto;
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 768px) {
 
-    h1 {
-        font-size: 2.2rem;
-    }
+  h1 {
+    font-size: 2.2rem;
+  }
 
-    h2 {
-        font-size: 1.6rem;
-    }
+  h2 {
+    font-size: 1.6rem;
+  }
 
-    h3 {
-        font-size: 1.2rem;
-    }
+  h3 {
+    font-size: 1.2rem;
+  }
 
-    h4 {
-        font-size: 1rem;
-    }
+  h4 {
+    font-size: 1rem;
+  }
 
-    h5 {
-        font-size: 0.68rem;
-    }
+  h5 {
+    font-size: 0.68rem;
+  }
 
-    .parent {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        width: 100%;
-        height: auto;
-    }
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    height: auto;
+  }
 
-    .div2 {
-        grid-area: 2 / 1 / 6 / 13;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        border-radius: 0px 190px 0px 0px;
-        padding: 10px;
-        background-image: none;
-    }
+  .div2 {
+    grid-area: 2 / 1 / 6 / 13;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 0px 190px 0px 0px;
+    padding: 10px;
+    background-image: none;
+  }
 
-    #login {
-        margin: 25px auto;
-        width: 300px;
-    }
+  #login {
+    margin: 25px auto;
+    width: 300px;
+  }
 }

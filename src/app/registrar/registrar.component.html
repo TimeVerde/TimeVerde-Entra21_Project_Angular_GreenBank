@@ -1,7 +1,5 @@
-<body class='' style="background-color: white;">
-
+<body class="" style="background-color: white">
   <div class="parent">
-
     <div class="div1">
       <div class="animateme">
         <ul class="bg-bubbles">
@@ -24,7 +22,6 @@
 
     <div class="div2">
       <div id="register">
-
         <h1>Create your account</h1>
 
         <fieldset>
@@ -32,130 +29,164 @@
             <input [(ngModel)]="pessoa.id" type="text" disabled>
           </p> -->
 
-
           <div class="row">
-
             <div class="col-10 me-2">
               <label>Full Name</label>
-              <input [(ngModel)]="pessoa.nome" type="text" required>
+              <input [(ngModel)]="pessoa.nome" type="text" required />
             </div>
             <div class="col">
               <label>Age</label>
-              <input [(ngModel)]="pessoa.idade" type="text" required>
+              <input [(ngModel)]="pessoa.idade" type="text" required />
             </div>
-
-
           </div>
           <div class="row pt-1">
-
             <div class="col me-2">
               <label>CPF</label>
-              <input [(ngModel)]="pessoa.cpf" type="text" required>
+              <input [(ngModel)]="pessoa.cpf" type="text" required />
             </div>
             <div class="col">
               <label>RG</label>
-              <input [(ngModel)]="pessoa.rg" type="text" required>
+              <input [(ngModel)]="pessoa.rg" type="text" required />
             </div>
-
           </div>
 
           <div class="row pt-1">
             <div class="col me-2">
               <label>Date of Birth</label>
-              <input [(ngModel)]="pessoa.data_nascimento" type="date" required>
+              <input
+                [(ngModel)]="pessoa.data_nascimento"
+                type="date"
+                required
+              />
             </div>
 
             <div class="col">
               <label>Gender</label>
-              <input [(ngModel)]="pessoa.sexo" type="text" required>
-
+              <input [(ngModel)]="pessoa.sexo" type="text" required />
             </div>
-
           </div>
 
           <div class="row pt-1">
             <label>Mother Name</label>
-            <input [(ngModel)]="pessoa.mae" type="text" required>
-
+            <input [(ngModel)]="pessoa.mae" type="text" required />
           </div>
 
           <div class="row pt-1">
             <label>Father Name</label>
-            <input [(ngModel)]="pessoa.pai" type="text" required>
-
+            <input [(ngModel)]="pessoa.pai" type="text" required />
           </div>
 
           <div class="row pt-1">
             <div class="col-4 me-2">
               <label>ZIP Code</label>
-              <input [(ngModel)]="pessoa.cep" type="text" required>
+              <input [(ngModel)]="pessoa.cep" type="text" required />
             </div>
             <div class="col">
               <label>Adress</label>
-              <input [(ngModel)]="pessoa.endereco" type="text" required>
+              <input [(ngModel)]="pessoa.endereco" type="text" required />
             </div>
           </div>
 
           <div class="row pt-1">
             <div class="col me-2">
               <label>Number</label>
-              <input [(ngModel)]="pessoa.numero" type="text" required>
+              <input [(ngModel)]="pessoa.numero" type="text" required />
             </div>
             <div class="col me-2">
               <label>District</label>
-              <input [(ngModel)]="pessoa.bairro" type="text" required>
+              <input [(ngModel)]="pessoa.bairro" type="text" required />
             </div>
             <div class="col me-2">
               <label>City</label>
-              <input [(ngModel)]="pessoa.cidade" type="text" required>
+              <input [(ngModel)]="pessoa.cidade" type="text" required />
             </div>
-            <div class="col">
+
+            <!-- <div class="col">
               <label>State</label>
-              <input [(ngModel)]="pessoa.estado" type="text" required>
+              <input [(ngModel)]="pessoa.estado" type="text" required />
             </div>
+          </div> -->
+
+          <div class="col-md-3">
+            <label>State</label>
+            <select [(ngModel)]="pessoa.estado" class="form-select" required>
+              <option>AC</option>
+              <option>AL</option>
+              <option>AP</option>
+              <option>AM</option>
+              <option>BA</option>
+              <option>CE</option>
+              <option>DF</option>
+              <option>ES</option>
+              <option>GO</option>
+              <option>MA</option>
+              <option>MT</option>
+              <option>MS</option>
+              <option>MG</option>
+              <option>PA</option>
+              <option>PB</option>
+              <option>PR</option>
+              <option>PE</option>
+              <option>PI</option>
+              <option>RJ</option>
+              <option>RN</option>
+              <option>RS</option>
+              <option>RO</option>
+              <option>RR</option>
+              <option>SC</option>
+              <option>SP</option>
+              <option>SE</option>
+              <option>TO</option>
+            </select>
           </div>
+        </div>
 
           <div class="row pt-1">
             <div class="col me-2">
               <label>Cell Phone</label>
-              <input [(ngModel)]="pessoa.celular" type="text" required>
+              <input [(ngModel)]="pessoa.celular" type="text" required />
             </div>
             <div class="col me-2">
               <label>E-mail</label>
-              <input [(ngModel)]="pessoa.email" type="text" required>
+              <input [(ngModel)]="pessoa.email" type="text" required />
             </div>
             <div class="col">
               <label>Password</label>
-              <input [(ngModel)]="pessoa.senha" type="text" required>
+              <input [(ngModel)]="pessoa.senha" type="text" required />
             </div>
           </div>
 
           <div class="row pt-1">
             <div class="col me-2">
               <label>Checking Account</label>
-              <input [(ngModel)]="pessoa.conta_corrente" type="text" required>
+              <input [(ngModel)]="pessoa.conta_corrente" type="text" required />
             </div>
             <div class="col">
               <label>Agency</label>
-              <input [(ngModel)]="pessoa.agencia" type="text" required>
+              <input [(ngModel)]="pessoa.agencia" type="text" required />
             </div>
           </div>
 
-
-
-
-
           <p>
-            <input type="checkbox" required>
+            <input type="checkbox" required />
             <span>I agree to GreenBank's Terms & Conditions</span>
           </p>
           <div class="row">
-            <input class="col me-2" type="submit" (click)="create()" value="Register">
-            <input class="col" type="submit" (click)="login()" value="Back to Login">
+            <input
+              class="col me-2"
+              type="submit"
+              (click)="create()"
+              value="Register"
+            />
+            <input
+              class="col"
+              type="submit"
+              (click)="login()"
+              value="Back to Login"
+            />
           </div>
         </fieldset>
       </div>
     </div>
   </div>
-
 </body>
