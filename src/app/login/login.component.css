@@ -105,7 +105,7 @@ p {
     background-repeat: no-repeat;
     background-size: 500px;
     background-attachment: fixed;
-    background-position: 110% 100%;
+    background-position: 115% 100%;
 }
 
 /* =============================== END OF GRID =============================== */
@@ -123,8 +123,9 @@ p {
 
 /* ---------- LOGIN ---------- */
 #login {
-    margin: 30px auto;
+    margin: 30px;
     width: 300px;
+
 
 }
 

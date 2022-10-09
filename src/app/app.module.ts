@@ -17,6 +17,8 @@ import { ClienteSaldoComponent } from './cliente/cliente-saldo/cliente-saldo.com
 import { ClienteInvestimentosComponent } from './cliente/cliente-investimentos/cliente-investimentos.component';
 import { ClienteModule } from './cliente/cliente.module';
 import { AdminComponent } from './admin/admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,14 @@ import { AdminComponent } from './admin/admin.component';
 
   ],
   imports: [
+    MatSliderModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     ClienteModule,
+    BrowserAnimationsModule,
   ],
   providers: [SegurancaService],
   bootstrap: [AppComponent],

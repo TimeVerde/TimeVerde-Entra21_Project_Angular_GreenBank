@@ -70,6 +70,11 @@ p {
     line-height: 1.8;
 }
 
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 
 /* =============================== START OF GRID =============================== */

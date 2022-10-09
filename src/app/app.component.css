@@ -133,17 +133,18 @@ aside {
 /* cores {
 
 
-  #01CB63 #01A550 #00D768 #565F67 #1D212F #CCF5E0 #DEE0E1 #6391FF #3B6ADB #719BFF
+  #01CB63 #01A550 #00D768 #565F67 #1D212F #CCF5E0 #DEE0E1 #6391FF #3B6ADB #719BFF #45AD6F #006641 #008d8c
+  #cce2e4 #E1EDE0 #00995D
 } */
 
 aside {
-  background-color: #565F67;
+  background-color: #00995D;
   box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
   color: white;
 }
 
 main {
-  background-color: #CCF5E0;
+  background-color: #DEE0E1  ;
 }
 
 .avatar__name {
