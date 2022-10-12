@@ -22,7 +22,7 @@
 .my-app__header-title {
   margin: 0 0 .625rem;
   font-size: 28px;
-  font-weight: bolder;
+  font-weight: normal;
   line-height: 32px;
   color: #00995D;
 }
@@ -134,7 +134,7 @@
   margin: 0;
   font-size: 30px;
   font-weight: 400;
-  color: #00995D;
+  color: #9EA0A5;
 }
 
 .my-text-overline {

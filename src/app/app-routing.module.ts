@@ -15,12 +15,12 @@ const routes: Routes = [
   {path: 'registrar', component: RegistrarComponent},
   {path: 'login', component: LoginComponent},
   {path: '', component: LoginComponent },
-  {path: 'clienteInfo', component: ClienteInfoComponent, canActivate:[SegurancaService] },
+  {path: 'clienteInfo', component: ClienteInfoComponent, canActivate:[SegurancaService]  },
   {path: 'clienteDeposito', component: ClienteDepositoComponent, canActivate:[SegurancaService] },
-  {path: 'clienteInvestimentos', component: ClienteInvestimentosComponent, canActivate:[SegurancaService] },
-  {path: 'clientePix', component: ClientePixComponent, canActivate:[SegurancaService] },
-  {path: 'clienteSaldo', component: ClienteSaldoComponent, canActivate:[SegurancaService] },
-  {path: 'clienteSaque', component: ClienteSaqueComponent, canActivate:[SegurancaService] },
+  {path: 'clienteInvestimentos', component: ClienteInvestimentosComponent, canActivate:[SegurancaService]  },
+  {path: 'clientePix', component: ClientePixComponent, canActivate:[SegurancaService]  },
+  {path: 'clienteSaldo', component: ClienteSaldoComponent, canActivate:[SegurancaService]  },
+  {path: 'clienteSaque', component: ClienteSaqueComponent, canActivate:[SegurancaService]  },
   {path: 'clienteTransfer', component: ClienteTransferComponent, canActivate:[SegurancaService] },
 ];
 

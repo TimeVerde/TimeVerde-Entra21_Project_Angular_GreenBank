@@ -56,13 +56,16 @@
             <div class="my-app__header-inner">
               <div class="my-app__header-text media">
                 <div class="media-body">
-                  <h1 class="my-app__header-title">Bem-vindo, <!--{{nome}} --> </h1>
+                  <h1 class="my-app__header-title">Bem-vindo, NOME </h1>
                   <div class="my-card card">
                     <div class="my-card__header card-header">
                       <div class="my-card__header-title">
-                        <div class="my-text-overline">Saldo Atual</div>
+                        <div class="my-text-overline">Saldo Atual
+                        </div>
+                        <span (click)="alterar()"><img src="https://cdn-icons-png.flaticon.com/512/2874/2874802.png"
+                            width="35px"></span>
+
                         <h3 *ngIf="aparece" class="my-text-headline pt-2 pb-3">R$2,100.00</h3>
-                        <button (click)="alterar()" class="btn btn-sm"><img style="border: none;" src="https://cdn-icons-png.flaticon.com/512/2874/2874802.png" width="35px"></button>
                       </div>
                     </div>
 
@@ -92,7 +95,14 @@
                       <li class="my-list-item">
                         <p class="my-text-overline">CPF</p>
                         <p class="ms-5">***.***.530-23</p>
-
+                      </li>
+                      <li class="my-list-item">
+                        <p class="my-text-overline">Conta-Corrente</p>
+                        <p class="ms-4">48373263-2</p>
+                      </li>
+                      <li class="my-list-item">
+                        <p class="my-text-overline">Agência</p>
+                        <p class="ms-5">2961</p>
                       </li>
                     </ul>
                   </div>
@@ -100,64 +110,60 @@
 
               </div>
 
-                <div class="my-card card col">
-                  <div class="my-card__header card-header">
-                    <h3 class="my-card__header-title card-title">Últimas Transações</h3>
-                    </div>
-                  <ul class="my-list list-group list-group-flush">
-                    <li class="my-list-item list-group-item">
-                      <div class="my-list-item__date">
-                        <span class="my-list-item__date-day">28</span>
-                        <span class="my-list-item__date-month">jul</span>
-                      </div>
-                      <div class="my-list-item__text">
-                        <h4 class="my-list-item__text-title">Bank of America</h4>
-                        <p class="my-list-item__text-description">Withdraw to bank account</p>
-                      </div>
-                      <div class="my-list-item__fee">
-                        <span class="my-list-item__fee-delta">+250.00</span>
-                        <span class="my-list-item__fee-currency">USD</span>
-                      </div>
-                    </li>
-                    <li class="my-list-item list-group-item">
-                      <div class="my-list-item__date">
-                        <span class="my-list-item__date-day">28</span>
-                        <span class="my-list-item__date-month">jul</span>
-                      </div>
-                      <div class="my-list-item__text">
-                        <h4 class="my-list-item__text-title">Bank of America</h4>
-                        <p class="my-list-item__text-description">Withdraw to bank account</p>
-                      </div>
-                      <div class="my-list-item__fee">
-                        <span class="my-list-item__fee-delta">+250.00</span>
-                        <span class="my-list-item__fee-currency">USD</span>
-                      </div>
-                    </li>
-                    <li class="my-list-item list-group-item">
-                      <div class="my-list-item__date">
-                        <span class="my-list-item__date-day">28</span>
-                        <span class="my-list-item__date-month">jul</span>
-                      </div>
-                      <div class="my-list-item__text">
-                        <h4 class="my-list-item__text-title">Bank of America</h4>
-                        <p class="my-list-item__text-description">Withdraw to bank account</p>
-                      </div>
-                      <div class="my-list-item__fee">
-                        <span class="my-list-item__fee-delta">+250.00</span>
-                        <span class="my-list-item__fee-currency">USD</span>
-                      </div>
-                    </li>
-                  </ul>
+              <div class="my-card card col me-2">
+                <div class="my-card__header card-header">
+                  <h3 class="my-card__header-title card-title">Últimas Transações</h3>
                 </div>
-
+                <ul class="my-list list-group list-group-flush">
+                  <li class="my-list-item list-group-item">
+                    <div class="my-list-item__date">
+                      <span class="my-list-item__date-day">28</span>
+                      <span class="my-list-item__date-month">jul</span>
+                    </div>
+                    <div class="my-list-item__text">
+                      <h4 class="my-list-item__text-title">Bank of America</h4>
+                      <p class="my-list-item__text-description">Withdraw to bank account</p>
+                    </div>
+                    <div class="my-list-item__fee">
+                      <span class="my-list-item__fee-delta">+250.00</span>
+                      <span class="my-list-item__fee-currency">USD</span>
+                    </div>
+                  </li>
+                  <li class="my-list-item list-group-item">
+                    <div class="my-list-item__date">
+                      <span class="my-list-item__date-day">28</span>
+                      <span class="my-list-item__date-month">jul</span>
+                    </div>
+                    <div class="my-list-item__text">
+                      <h4 class="my-list-item__text-title">Bank of America</h4>
+                      <p class="my-list-item__text-description">Withdraw to bank account</p>
+                    </div>
+                    <div class="my-list-item__fee">
+                      <span class="my-list-item__fee-delta">+250.00</span>
+                      <span class="my-list-item__fee-currency">USD</span>
+                    </div>
+                  </li>
+                  <li class="my-list-item list-group-item">
+                    <div class="my-list-item__date">
+                      <span class="my-list-item__date-day">28</span>
+                      <span class="my-list-item__date-month">jul</span>
+                    </div>
+                    <div class="my-list-item__text">
+                      <h4 class="my-list-item__text-title">Bank of America</h4>
+                      <p class="my-list-item__text-description">Withdraw to bank account</p>
+                    </div>
+                    <div class="my-list-item__fee">
+                      <span class="my-list-item__fee-delta">+250.00</span>
+                      <span class="my-list-item__fee-currency">USD</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
+
             </div>
-            </section>
-          </main>
-          </header>
           </div>
+        </section>
+      </main>
+    </header>
+  </div>
 </div>
-
-
-
-

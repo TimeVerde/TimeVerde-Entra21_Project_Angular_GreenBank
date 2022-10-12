@@ -30,32 +30,23 @@
 
 
 
-      <section class="my-app__body">
+      <section class="my-app__body pt-4">
         <div class="container">
           <div class="row">
             <div class="col-4">
 
 
-              <div class="my-card card pb-3">
+              <div class="my-card card pb-5">
                 <div class="my-card__body card-body">
                   <div class="my-text-overline2 text-center fw-bolder">Validações</div>
                   <ul class="my-list my-list--simple list-inline mb-0">
 
                     <li class="my-list-item">
                       <label class="my-text-overline">Senha</label>
-                      <input style="width: 90%;" class="ms-2" type="text" required />
-
-
-
+                      <input style="width: 90%; border-radius: 10px;" class="ms-2 text-center" type="text" required />
+                      <button style="border-radius: 10px;" class="btn ms-1 btn-sm btn-outline-secondary" type="submit">Validar</button>
 
                     </li>
-                    <div class="col"></div>
-                    <div style="position:absolute; top:88%; left:50%; transform: translate(-50%, -50%);" class="col ">
-                      <button
-                        class="position-absolute top-50 start-50 translate-middle btn btn-sm btn-outline-secondary"
-                        type="submit">Validar</button>
-                    </div>
-                    <div class="col"></div>
 
 
 
@@ -66,15 +57,15 @@
 
             </div>
 
-            <div class="my-card card col">
+            <div class="my-card card col me-2">
               <div class="my-card__header card-header">
                 <h3 class="my-card__header-title card-title text-center">Qual valor irá transferir?</h3>
               </div>
               <ul class="my-list list-group list-group-flush">
-                <li class="ms-3 my-list-item">
+                <li class="ms-3 my-list-item ">
                   <label class="my-text-overline3">R$</label>
                   <input style="color: #00995D;font-size: 35px; border-radius: 10px 10px; border-style: dashed;"
-                    class="text-center mt-2 p-4 ms-4" type="number" required />
+                    class="text-center ms-4" type="number" required />
 
 
               </ul>

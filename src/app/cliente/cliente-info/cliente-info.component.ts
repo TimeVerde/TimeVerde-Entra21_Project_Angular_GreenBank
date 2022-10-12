@@ -9,7 +9,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class ClienteInfoComponent implements OnInit {
 
   aparece!:boolean
-  nome: string = ""
+  nome!: string
 
   constructor(private usuarioService: UsuarioService) {
 
@@ -25,5 +25,7 @@ export class ClienteInfoComponent implements OnInit {
     this.aparece = !this.aparece
 
   }
+
+
 
 }
