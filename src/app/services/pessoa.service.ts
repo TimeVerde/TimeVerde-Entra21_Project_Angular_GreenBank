@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class PessoaService {
+
   apiUrl: string = 'http://localhost:8080/pessoas';
 
   constructor(private http: HttpClient) {}
@@ -29,5 +30,6 @@ export class PessoaService {
   delete(pessoa: any): Observable<any> {
     return this.http.delete<any>(this.apiUrl + '/' + pessoa.id);
   }
+
 }
 

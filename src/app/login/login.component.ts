@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, of } from 'rxjs';
+import { PessoaLogadaService } from '../services/pessoa-logada.service';
 import { SegurancaService } from '../services/seguranca.service';
 import { UsuarioService } from '../services/usuario.service';
 
@@ -13,10 +14,13 @@ export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
   mensagem: string='';
+  pessoa!: any;
+
   constructor(
     private seguranca: SegurancaService,
     private usuarioService: UsuarioService,
-    private router: Router
+    private router: Router,
+    private pessoaLogada: PessoaLogadaService
   ) {}
 
   ngOnInit(): void {
@@ -40,7 +44,6 @@ export class LoginComponent implements OnInit {
           console.log(
             'Falha simulada pois não há backend ainda, então pode entrar'
           );
-
           return of(false);
         })
       )
@@ -49,6 +52,7 @@ export class LoginComponent implements OnInit {
         console.log('response', response);
 
         if (response) {
+          this.pessoaLogada.setpessoa(response);
           this.seguranca.logged = response;
           this.seguranca.email = this.email;
 
@@ -57,7 +61,6 @@ export class LoginComponent implements OnInit {
           this.mensagem="Usuário/Senha não encontrado"
         }
       });
-
   }
 
   forgotPassword(): void {
@@ -69,6 +72,6 @@ export class LoginComponent implements OnInit {
   }
 
   register(): void {
-    this.router.navigateByUrl("registrar")
+    this.router.navigateByUrl('registrar');
   }
 }

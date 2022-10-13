@@ -147,7 +147,6 @@ select {
     margin-top: 0px;
     appearance: none;
     background: #e5e5e5;
-    border: none;
     border-radius: 3px;
     color: #5a5656;
     font-family: inherit;
@@ -156,6 +155,10 @@ select {
     outline: none;
     padding: 0px 10px;
     width: 100%;
+}
+
+.alerta {
+  border: 1px solid red;
 }
 
 input[type=checkbox] {
@@ -175,6 +178,8 @@ input[type=checkbox]:before {
     border: 1px solid rgb(67, 65, 65);
     background-color: white;
 }
+
+
 
 input[type=checkbox]:checked:after {
     content: "";

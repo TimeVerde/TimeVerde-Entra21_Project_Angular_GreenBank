@@ -8,17 +8,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { SegurancaService } from './services/seguranca.service';
-import { ClienteInfoComponent } from './cliente/cliente-info/cliente-info.component';
-import { ClienteSaqueComponent } from './cliente/cliente-saque/cliente-saque.component';
-import { ClienteDepositoComponent } from './cliente/cliente-deposito/cliente-deposito.component';
-import { ClienteTransferComponent } from './cliente/cliente-transfer/cliente-transfer.component';
-import { ClientePixComponent } from './cliente/cliente-pix/cliente-pix.component';
-import { ClienteSaldoComponent } from './cliente/cliente-saldo/cliente-saldo.component';
-import { ClienteInvestimentosComponent } from './cliente/cliente-investimentos/cliente-investimentos.component';
 import { ClienteModule } from './cliente/cliente.module';
 import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { ClienteInfoComponent } from './cliente/cliente-info/cliente-info.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +20,6 @@ import { MatSliderModule } from '@angular/material/slider';
     LoginComponent,
     RegistrarComponent,
     AdminComponent,
-
   ],
   imports: [
     MatSliderModule,

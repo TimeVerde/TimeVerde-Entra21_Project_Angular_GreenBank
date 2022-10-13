@@ -30,7 +30,7 @@
 							"raw": "{\r\n    \"saldo\": 100\r\n}"
 						},
 						"url": {
-							"raw": "localhost:8080/pessoas/deposito/1",
+							"raw": "localhost:8080/pessoas/deposito/ { id }",
 							"host": [
 								"localhost"
 							],
@@ -38,7 +38,7 @@
 							"path": [
 								"pessoas",
 								"deposito",
-								"1"
+								" { id }"
 							]
 						}
 					},
@@ -65,7 +65,7 @@
 							"raw": "{\r\n    \"saldo\": 20\r\n}"
 						},
 						"url": {
-							"raw": "localhost:8080/pessoas/sacar/1",
+							"raw": "localhost:8080/pessoas/sacar/ { id }",
 							"host": [
 								"localhost"
 							],
@@ -73,7 +73,7 @@
 							"path": [
 								"pessoas",
 								"sacar",
-								"1"
+								" { id }"
 							]
 						}
 					},
@@ -100,7 +100,7 @@
 							"raw": "{\r\n    \"saldo\": 70\r\n}"
 						},
 						"url": {
-							"raw": "localhost:8080/pessoas/transferencia/1/2",
+							"raw": "localhost:8080/pessoas/transferencia/ { id } / { id }",
 							"host": [
 								"localhost"
 							],
@@ -108,8 +108,8 @@
 							"path": [
 								"pessoas",
 								"transferencia",
-								"1",
-								"2"
+								" { id } ",
+								" { id }"
 							]
 						}
 					},
@@ -121,7 +121,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/pessoas/saldo/1",
+							"raw": "localhost:8080/pessoas/saldo/ { id }",
 							"host": [
 								"localhost"
 							],
@@ -129,7 +129,7 @@
 							"path": [
 								"pessoas",
 								"saldo",
-								"1"
+								" { id }"
 							]
 						}
 					},
@@ -224,33 +224,51 @@
 			"name": "Criação de Conteúdo",
 			"item": [
 				{
-					"name": "POST AboutUs Created",
+					"name": "GET Sobre",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
+						"method": "GET",
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Thabata Santos\",\r\n    \"github\": \"https://github.com/ThataSantos\",\r\n    \"linkedin\": \"www.linkedin.com/in/thabatasantos\",\r\n    \"image\": \"https://avatars.githubusercontent.com/u/100490750?s=96&v=4\"\r\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "localhost:8080/aboutus",
+							"raw": "localhost:8080/sobre",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"aboutus"
+								"sobre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET by ID Sobre",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/sobre/ { id }",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sobre",
+								" { id }"
 							]
 						}
 					},
@@ -283,14 +301,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/pessoas/{ id }",
+					"raw": "localhost:8080/pessoas/ { id }",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"pessoas",
-						"{ id }"
+						" { id }"
 					]
 				},
 				"description": "Essa requisação serve para capturar uma pessoa de uma lista de pessoas do meu banco de dado."
@@ -303,14 +321,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/pessoas/{ id }",
+					"raw": "localhost:8080/pessoas/ { id }",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"pessoas",
-						"{ id }"
+						" { id }"
 					]
 				},
 				"description": "Essa requisação serve para capturar uma pessoa de uma lista de pessoas do meu banco de dado."
@@ -335,7 +353,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"nome\": \"Iago Ricardo Dias\",\r\n\"idade\": \"26\",\r\n\"cpf\": \"174.385.733-03\",\r\n\"rg\": \"30.601.472-5\",\r\n\"dataNascimento\": \"04/05/1996\",\r\n\"sexo\": \"M\",\r\n\"mae\": \"Rebeca Sandra\",\r\n\"pai\": \"Pedro Henrique Enzo Leandro Dias\",\r\n\"cep\": \"64090-145\",\r\n\"endereco\": \"Rua Estudante Deilane Raquel Silva\",\r\n\"numero\": \"973\",\r\n\"bairro\": \"Gurupi\",\r\n\"cidade\": \"Teresina\",\r\n\"estado\": \"PI\",\r\n\"celular\": \"(86) 99219-6272\",\r\n\"email\": \"iago.ricardo.dias@atualecomex.com.br\",\r\n\"senha\": \"k0820FtL6w\",\r\n\"conta_corrente\": \"0480426-0\",\r\n\"agencia\": \"3182\"\r\n}"
+					"raw": "{\r\n\"bairro\": \"Gurupi\",\r\n\"celular\": \"(86) 99219-6272\",\r\n\"cep\": \"64090-145\",\r\n\"cidade\": \"Teresina\",\r\n\"cpf\": \"174.385.733-03\",\r\n\"dataNascimento\": \"04/05/1996\",\r\n\"email\": \"iago.ricardo.dias@atualecomex.com.br\",\r\n\"endereco\": \"Rua Estudante Deilane Raquel Silva\",\r\n\"estado\": \"PI\",\r\n\"idade\": \"26\",\r\n\"mae\": \"Rebeca Sandra\",\r\n\"nome\": \"Iago Ricardo Dias\",\r\n\"numero\": \"973\",\r\n\"pai\": \"Pedro Henrique Enzo Leandro Dias\",\r\n\"rg\": \"30.601.472-5\",\r\n\"senha\": \"k0820FtL6w\",\r\n\"sexo\": \"Masculino\"\r\n}"
 				},
 				"url": {
 					"raw": "localhost:8080/pessoas",
@@ -372,14 +390,14 @@
 					"raw": "{\r\n\"nome\":\"Luiz Marcos Vinicius Gustavo Nogueira\",\r\n\"cpf\":\"121.476.488-68\",\r\n\"rg\":\"41.859.395-4\",\r\n\"data_nascimento\":\"04/09/1985\",\r\n\"mae\":\"Luciana Lara Isis\",\r\n\"pai\":\"Diogo Edson Nogueira\",\r\n\"cep\":\"71995-455\",\r\n\"endereco\":\"Conjunto SHA Conjunto 5 Chácara 110\",\r\n\"celular\":\"(61) 99445-1841\",\r\n\"senha\":\"1Pyo3ZrKBr\",\r\n\"email\":\"luizmarcosnogueira@myself.com\"\r\n}"
 				},
 				"url": {
-					"raw": "localhost:8080/pessoas/{ id }",
+					"raw": "localhost:8080/pessoas/ { id }",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"pessoas",
-						"{ id }"
+						" { id }"
 					]
 				},
 				"description": "Essa requisição serve para atualizar uma pessoa e adicionar ao bando de dados."

@@ -1,5 +1,8 @@
+
 <body class="" style="background-color: white">
+
   <div class="parent">
+    <!-- ========== INICIO DA ANIMAÇÃO ========== -->
     <div class="div1">
       <div class="animateme">
         <ul class="bg-bubbles">
@@ -19,158 +22,178 @@
         </ul>
       </div>
     </div>
+    <!-- ========== FIM DA ANIMAÇÃO ========== -->
 
+    <!-- ========== INICIO DO REGISTRAR ========== -->
     <div class="div2">
       <div id="register">
         <h1>Create your account</h1>
 
         <fieldset>
-          <!-- <p>
-            <input [(ngModel)]="pessoa.id" type="text" disabled>
-          </p> -->
-
           <div class="row">
+            <!-- ========= NOME -->
             <div class="col-10 me-2">
-              <label>Full Name</label>
-              <input [(ngModel)]="pessoa.nome" type="text" required />
+              <label>Nome completo</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.nome" type="text" required />
             </div>
+            <!-- ========= NOME -->
+
+            <!-- ========= IDADE -->
             <div class="col">
-              <label>Age</label>
-              <input [(ngModel)]="pessoa.idade" type="text" required />
+              <label>Idade</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.idade" type="text" required />
             </div>
+            <!-- ========= IDADE -->
           </div>
+
           <div class="row pt-1">
+            <!-- ========= CPF -->
             <div class="col me-2">
               <label>CPF</label>
-              <input [(ngModel)]="pessoa.cpf" type="text" required />
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.cpf" type="text" required />
             </div>
+            <!-- ========= CPF -->
+
+            <!-- ========= RG -->
             <div class="col">
               <label>RG</label>
-              <input [(ngModel)]="pessoa.rg" type="text" required />
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.rg" type="text" required />
             </div>
+            <!-- ========= RG -->
           </div>
 
           <div class="row pt-1">
+            <!-- ========= NASCIMENTO -->
             <div class="col me-2">
-              <label>Date of Birth</label>
-              <input
-                [(ngModel)]="pessoa.data_nascimento"
-                type="date"
-                required
-              />
+              <label>Data de nascimento</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.dataNascimento" type="text" required />
             </div>
+            <!-- ========= NASCIMENTO -->
 
+            <!-- ========= GENERO -->
             <div class="col">
-              <label>Gender</label>
-              <input [(ngModel)]="pessoa.sexo" type="text" required />
+              <label>Gênero</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.sexo" type="text" required />
             </div>
+            <!-- ========= GENERO -->
           </div>
 
           <div class="row pt-1">
-            <label>Mother Name</label>
-            <input [(ngModel)]="pessoa.mae" type="text" required />
+            <!-- ========= MAE -->
+            <label>Nome da mãe</label>
+            <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.mae" type="text" required />
+            <!-- ========= MAE -->
           </div>
 
+          <!-- ========= PAI -->
           <div class="row pt-1">
-            <label>Father Name</label>
-            <input [(ngModel)]="pessoa.pai" type="text" required />
+            <label>Nome do pai</label>
+            <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.pai" type="text" required />
           </div>
+          <!-- ========= PAI -->
 
           <div class="row pt-1">
+            <!-- ========= CEP -->
             <div class="col-4 me-2">
-              <label>ZIP Code</label>
-              <input [(ngModel)]="pessoa.cep" type="text" required />
+              <label>CEP</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.cep" type="text" required />
             </div>
+            <!-- ========= CEP -->
+
+            <!-- ========= ENDERECO -->
             <div class="col">
-              <label>Adress</label>
-              <input [(ngModel)]="pessoa.endereco" type="text" required />
+              <label>Endereço</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.endereco" type="text" required />
             </div>
+            <!-- ========= ENDERECO -->
           </div>
 
           <div class="row pt-1">
+            <!-- ========= NUMERO -->
             <div class="col me-2">
-              <label>Number</label>
-              <input [(ngModel)]="pessoa.numero" type="text" required />
+              <label>Número</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.numero" type="text" required />
             </div>
-            <div class="col me-2">
-              <label>District</label>
-              <input [(ngModel)]="pessoa.bairro" type="text" required />
-            </div>
-            <div class="col me-2">
-              <label>City</label>
-              <input [(ngModel)]="pessoa.cidade" type="text" required />
-            </div>
+            <!-- ========= NUMERO -->
 
-            <!-- <div class="col">
-              <label>State</label>
-              <input [(ngModel)]="pessoa.estado" type="text" required />
+            <!-- ========= BAIRRO -->
+            <div class="col me-2">
+              <label>Bairro</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.bairro" type="text" required />
             </div>
-          </div> -->
+            <!-- ========= BAIRRO -->
 
-          <div class="col-md-3">
-            <label>State</label>
-            <select [(ngModel)]="pessoa.estado" class="form-select" required>
-              <option>AC</option>
-              <option>AL</option>
-              <option>AP</option>
-              <option>AM</option>
-              <option>BA</option>
-              <option>CE</option>
-              <option>DF</option>
-              <option>ES</option>
-              <option>GO</option>
-              <option>MA</option>
-              <option>MT</option>
-              <option>MS</option>
-              <option>MG</option>
-              <option>PA</option>
-              <option>PB</option>
-              <option>PR</option>
-              <option>PE</option>
-              <option>PI</option>
-              <option>RJ</option>
-              <option>RN</option>
-              <option>RS</option>
-              <option>RO</option>
-              <option>RR</option>
-              <option>SC</option>
-              <option>SP</option>
-              <option>SE</option>
-              <option>TO</option>
-            </select>
+            <!-- ========= CIDADE -->
+            <div class="col me-2">
+              <label>Cidade</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.cidade" type="text" required />
+            </div>
+            <!-- ========= CIDADE -->
+
+            <!-- ========= ESTADO -->
+            <div class="col-md-3">
+              <label>Estado</label>
+              <select [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.estado" class="form-select" required>
+                <option>AC</option>
+                <option>AL</option>
+                <option>AP</option>
+                <option>AM</option>
+                <option>BA</option>
+                <option>CE</option>
+                <option>DF</option>
+                <option>ES</option>
+                <option>GO</option>
+                <option>MA</option>
+                <option>MT</option>
+                <option>MS</option>
+                <option>MG</option>
+                <option>PA</option>
+                <option>PB</option>
+                <option>PR</option>
+                <option>PE</option>
+                <option>PI</option>
+                <option>RJ</option>
+                <option>RN</option>
+                <option>RS</option>
+                <option>RO</option>
+                <option>RR</option>
+                <option>SC</option>
+                <option>SP</option>
+                <option>SE</option>
+                <option>TO</option>
+              </select>
+            </div>
+            <!-- ========= ESTADO -->
           </div>
-        </div>
 
           <div class="row pt-1">
+            <!-- ========= CELULAR -->
             <div class="col me-2">
-              <label>Cell Phone</label>
-              <input [(ngModel)]="pessoa.celular" type="text" required />
+              <label>Celular</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.celular" type="text" required />
             </div>
+            <!-- ========= CELULAR -->
+
+            <!-- ========= EMAIL -->
             <div class="col me-2">
               <label>E-mail</label>
-              <input [(ngModel)]="pessoa.email" type="text" required />
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.email" type="text" required />
             </div>
-            <div class="col">
-              <label>Password</label>
-              <input [(ngModel)]="pessoa.senha" type="text" required />
-            </div>
-          </div>
+            <!-- ========= EMAIL -->
 
-          <div class="row pt-1">
-            <div class="col me-2">
-              <label>Checking Account</label>
-              <input [(ngModel)]="pessoa.conta_corrente" type="text" required />
-            </div>
+            <!-- ========= SENHA -->
             <div class="col">
-              <label>Agency</label>
-              <input [(ngModel)]="pessoa.agencia" type="text" required disabled />
+              <label>Senha</label>
+              <input [ngClass]="{'alerta': mensagem != ''}" [(ngModel)]="pessoa.senha" type="text" required />
             </div>
+            <!-- ========= SENHA -->
           </div>
 
           <p>
             <input type="checkbox" required />
             <span>I agree to GreenBank's Terms & Conditions</span>
           </p>
+
           <div class="row">
             <input
               class="col me-2"
@@ -178,6 +201,7 @@
               (click)="create()"
               value="Register"
             />
+
             <input
               class="col"
               type="submit"
@@ -185,8 +209,12 @@
               value="Back to Login"
             />
           </div>
+
         </fieldset>
       </div>
     </div>
+    <!-- ========== INICIO DO REGISTRAR ========== -->
+
   </div>
+
 </body>
