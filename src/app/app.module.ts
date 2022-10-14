@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { ClienteInfoComponent } from './cliente/cliente-info/cliente-info.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ClienteInfoComponent } from './cliente/cliente-info/cliente-info.compon
     LoginComponent,
     RegistrarComponent,
     AdminComponent,
+    HomeComponent,
   ],
   imports: [
     MatSliderModule,

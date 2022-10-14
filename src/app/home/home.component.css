@@ -1,0 +1,491 @@
+:root {
+  --color-white: #fff;
+  --color-green: #00ff5f;
+  --color-dark-green: #01A550;
+  --color-light-green: #00D768;
+  --color-night: #1D212F;
+  --color-gray: #565F67;
+  --color-light-gray: #DEE0E1;
+  --color-cyan: #CCF5E0;
+  --color-blue: #6391FF;
+  --color-dark-blue: #3B6ADB;
+  --color-light-blue: #719BFF;
+
+  --transition: all 300ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://assets-blog.pagseguro.uol.com.br/wp-content/2022/01/quando-e-como-comecar-a-investir-1536x1024.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Poppins, 'Arial', 'sans-serif';
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+  place-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 0.86rem;
+}
+
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 6 / 13;
+  width: 100%;
+  height: 100%;
+}
+
+.div2 {
+  grid-area: 1 / 1 / 2 / 13;
+  width: 100%;
+  height: 100%;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  background: var(--color-white);
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+  -webkit-box-shadow: 0px 15px 23px 0px rgba(50, 50, 50, 0.14);
+  -moz-box-shadow: 0px 15px 23px 0px rgba(50, 50, 50, 0.14);
+  box-shadow: 0px 15px 23px 0px rgba(50, 50, 50, 0.14);
+}
+
+nav h2 {
+  font-size: 30px;
+  cursor: pointer;
+
+
+}
+
+.color1 {
+  color: #00995D;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0px;
+  font-size: 20px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  /* car de base les pseudos-éléments sont de type inline*/
+
+  width: 0px;
+  height: 2px;
+  margin: 0 auto 0 auto;
+  border-radius: 2px;
+  background: var(--color-dark-green);
+  transition: width 0.2s ease-out;
+}
+
+nav ul li a:hover::after {
+  width: 80%;
+}
+
+nav ul li a:hover {
+  color: var(--color-dark-green);
+}
+
+
+nav .connection {
+  /* position: relative;
+  top: -2px; */
+  width: 120px;
+  height: auto;
+  padding: 10px 0;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: linear-gradient(84.12deg, #00995D -24.93%, #006641 139.25%);
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+nav .connection:hover {
+  background: linear-gradient(84.12deg, #01A550 139.25%, #45AD6F -24.93%);
+}
+
+
+/* Hamburger anim */
+
+nav .hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 64px;
+  height: 42px;
+  cursor: pointer;
+}
+
+nav .hamburger-menu .slice {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #000;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .hamburger-menu .slice:nth-child(1) {
+  top: 0px;
+}
+
+nav .hamburger-menu .slice:nth-child(2) {
+  top: 18px;
+}
+
+nav .hamburger-menu .slice:nth-child(3) {
+  top: 36px;
+}
+
+nav .hamburger-menu.active .slice:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+}
+
+nav .hamburger-menu.active .slice:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+
+}
+
+nav .hamburger-menu.active .slice:nth-child(3) {
+  top: 18px;
+  transform: rotate(-135deg);
+
+}
+
+/* Hero Section */
+
+/* cores {
+
+  #01CB63     #01A550     #00D768     #565F67
+
+  #1D212F     #CCF5E0     #DEE0E1     #6391FF
+
+  #3B6ADB     #719BFF     #45AD6F     #006641
+
+  #008d8c     #cce2e4     #E1EDE0     #00995D
+
+} */
+
+.section-hero {
+  position: relative;
+  top: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 557px;
+}
+
+.hero-gauche {
+  max-width: 650px;
+  max-height: 400px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 115px 15px 115px 15px;
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  width: 100%;
+  height: 100%;
+
+
+  margin: 70px 0px 0px 70px;
+  padding: 50px;
+  text-align: center;
+
+}
+
+.hero-gauche p {
+  margin-top: 2rem;
+  line-height: 3.8rem;
+  color: white;
+
+}
+
+.hero-gauche h1 {
+  font-size: 65px;
+  color: white;
+
+}
+
+.hero-gauche h1 strong {
+  color: #00995D;
+}
+
+
+
+.hero-droite {
+  max-width: 600px;
+}
+
+.hero-droite img {
+  margin-top: 100px;
+  width: 700px;
+}
+
+
+
+
+/* Medias Queries */
+
+@media screen and (max-width: 1364px) {
+
+  body {
+      width: 100%;
+      height: 100%;
+      background-image: url(https://assets-blog.pagseguro.uol.com.br/wp-content/2022/01/quando-e-como-comecar-a-investir-1536x1024.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Poppins, 'Arial', 'sans-serif';
+      line-height: 1.5;
+      margin: 0;
+      min-height: 100vh;
+      place-items: center;
+  }
+
+  .section-hero {
+
+      flex-direction: column;
+      justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+
+  /* Navigation */
+
+  nav {
+      height: auto;
+
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  nav ul li {
+
+      display: block;
+      margin: 15px 0;
+      text-align: center;
+  }
+
+  nav h2,
+  nav .navbar,
+  nav .connection {
+
+      position: relative;
+      top: 75px;
+
+      display: none;
+  }
+
+  /* On affiche le menu hamburger */
+  nav .hamburger-menu {
+      display: block;
+  }
+
+
+  /* Et si on clique dessus on décale tous les éléments de la nav sauf le bouton hamburger */
+
+  nav.active {
+      padding-bottom: 100px;
+  }
+
+  nav.active h2,
+  nav.active .navbar,
+  nav.active .connection {
+
+      position: relative;
+      top: 75px;
+
+      display: block;
+  }
+
+  /* Hero */
+
+  .section-hero {
+      top: 100px
+  }
+
+  .hero-gauche,
+  .hero-droite {
+
+      max-width: none;
+      margin-left: 20px;
+  }
+
+  .hero-gauche h1 {
+      font-size: 60px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .hero-gauche,
+  .hero-droite {
+
+      margin-left: 30px;
+  }
+
+  .hero-gauche h1 {
+      font-size: 50px;
+      color: black;
+  }
+
+  .hero-gauche p {
+
+      font-size: 18px;
+      color: black;
+  }
+
+
+  .hero-gauche form {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .hero-gauche button {
+
+      margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+
+  .hero-gauche h1 {
+      font-size: 40px;
+  }
+}
+
+
+.animacao {
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/* ----------------------------------------------
+* Generated by Animista on 2022-10-13 15:35:18
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info.
+* w: http://animista.net, t: @cssanimista
+* ---------------------------------------------- */
+
+/**
+* ----------------------------------------
+* animation text-focus-in
+* ----------------------------------------
+*/
+@-webkit-keyframes text-focus-in {
+  0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+  }
+
+  100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+  }
+
+  100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+  }
+}

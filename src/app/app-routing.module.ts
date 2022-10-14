@@ -7,6 +7,7 @@ import { ClientePixComponent } from './cliente/cliente-pix/cliente-pix.component
 import { ClienteSaldoComponent } from './cliente/cliente-saldo/cliente-saldo.component';
 import { ClienteSaqueComponent } from './cliente/cliente-saque/cliente-saque.component';
 import { ClienteTransferComponent } from './cliente/cliente-transfer/cliente-transfer.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { SegurancaService } from './services/seguranca.service';
@@ -14,7 +15,8 @@ import { SegurancaService } from './services/seguranca.service';
 const routes: Routes = [
   {path: 'registrar', component: RegistrarComponent},
   {path: 'login', component: LoginComponent},
-  {path: '', component: LoginComponent },
+  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent },
   {path: 'clienteInfo', component: ClienteInfoComponent, canActivate:[SegurancaService]  },
   {path: 'clienteDeposito', component: ClienteDepositoComponent, canActivate:[SegurancaService] },
   {path: 'clienteInvestimentos', component: ClienteInvestimentosComponent, canActivate:[SegurancaService]  },

@@ -74,4 +74,7 @@ export class LoginComponent implements OnInit {
   register(): void {
     this.router.navigateByUrl('registrar');
   }
+  collabGreen(): void {
+    this.router.navigateByUrl('home');
+  }
 }
