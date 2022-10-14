@@ -56,7 +56,7 @@
             <div class="my-app__header-inner">
               <div class="my-app__header-text media">
                 <div class="media-body">
-                  <h1 class="my-app__header-title">Bem-vindo, NOME </h1>
+                  <h1 class="my-app__header-title">Bem-vindo, {{ pessoa.nome }} </h1>
                   <div class="my-card card">
                     <div class="my-card__header card-header">
                       <div class="my-card__header-title">
@@ -90,19 +90,19 @@
                     <ul class="my-list my-list--simple list-inline mb-0">
                       <li class="my-list-item ">
                         <p class="my-text-overline">Data de nascimento</p>
-                        <p class="ms-2">03/08/1994</p>
+                        <p class="ms-2">{{pessoa.dataNascimento}}</p>
                       </li>
                       <li class="my-list-item">
                         <p class="my-text-overline">CPF</p>
-                        <p class="ms-5">***.***.530-23</p>
+                        <p class="ms-5">{{pessoa.cpf}}</p>
                       </li>
                       <li class="my-list-item">
                         <p class="my-text-overline">Conta-Corrente</p>
-                        <p class="ms-4">48373263-2</p>
+                        <p class="ms-4">{{pessoa.conta_corrente}}</p>
                       </li>
                       <li class="my-list-item">
                         <p class="my-text-overline">Agência</p>
-                        <p class="ms-5">2961</p>
+                        <p class="ms-5">{{pessoa.agencia}}</p>
                       </li>
                     </ul>
                   </div>
