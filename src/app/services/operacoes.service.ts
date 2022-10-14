@@ -12,19 +12,18 @@ export class OperacoesService {
   constructor(private http: HttpClient) {}
 
   getSaldo(pessoa: any): Observable<any> {
-    return this.http.get<any>(this.apiUrl + '/' + 'saldo' + '/' + pessoa.id);
+    return this.http.get<any>(this.apiUrl + '/' + 'saldo' + '/' + pessoa);
   }
 
-  transferencia(pessoa01: any, pessoa02: any): Observable<any> {
-    return this.http.get<any>(this.apiUrl + '/' + 'transferencia' + '/' + pessoa01.id + '/' + pessoa02.id);
+  transferencia(pessoa01: any, pessoa02: any, body: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/' + 'transferencia' + '/' + pessoa01, body);
   }
 
-  sacar(pessoa: any): Observable<any> {
-    return this.http.get<any>(this.apiUrl + '/' + 'sacar' + '/' + pessoa.id);
+  sacar(pessoa: any, body: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/' + 'sacar' + '/' + pessoa, body);
   }
 
-  deposito(pessoa: any): Observable<any> {
-    return this.http.get<any>(this.apiUrl + '/' + 'deposito' + '/' + pessoa.id);
+  deposito(pessoa: any, body: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/' + 'deposito' + '/' + pessoa, body);
   }
-
 }

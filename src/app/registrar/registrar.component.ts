@@ -27,7 +27,6 @@ export class RegistrarComponent implements OnInit {
   create(): void {
 
     if (!this.validForm()) {
-      this.mensagem = 'campo obrigado';
       return;
     }
 
@@ -53,10 +52,18 @@ export class RegistrarComponent implements OnInit {
 
   validForm(): boolean {
     let valid: boolean = true;
+    this.mensagem = ""
 
     if (
       !this.pessoa.nome
     ) {
+      this.mensagem += 'nome'
+      valid = false;
+    }
+    if (
+      !this.pessoa.idade
+    ) {
+      this.mensagem += 'idade'
       valid = false;
     }
 

@@ -64,8 +64,7 @@
               <ul class="my-list list-group list-group-flush">
                 <li class="ms-3 my-list-item ">
                   <label class="my-text-overline3">R$</label>
-                  <input style="color: #00995D;font-size: 35px; border-radius: 10px 10px; border-style: dashed;"
-                    class="text-center ms-4" type="number" required />
+                  <input [(ngModel)]="saldo" style="color: #00995D;font-size: 35px; border-radius: 10px 10px; border-style: dashed;" class="text-center ms-4" type="number" required />
 
 
               </ul>
@@ -86,6 +85,7 @@
                       <h3 class="my-text-headline pt-2 pb-3">NUMERO DA CONTA CORRENTE DE DESTINO</h3>
                       <div class="my-text-overline">Nome:</div>
                       <h3 class="my-text-headline pt-2 pb-3">Nome do usuário de destino</h3>
+                      <input [(ngModel)]="pessoa02.id" type="text" required />
                     </div>
                   </div>
 
@@ -96,7 +96,7 @@
         </div>
       </section>
       <div class="col"></div>
-      <div class="col pt-2 text-center"><button class="btn btn-lg btn-success">Confirmar Transferência</button></div>
+      <div class="col pt-2 text-center"><button class="btn btn-lg btn-success" (click)="transferencia()">Confirmar Transferência</button></div>
       <div class="col"></div>
 
     </main>
