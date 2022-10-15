@@ -1,56 +1,8 @@
-<!-- <div class="row">
-  <div class="col"></div>
-
-  <div style="border-radius: 25px" class="card-body box-profile col-8 border m-2">
-    <h3 style="font-size: 35px;" class="profile-username text-center pb-3">Rafael da Silva Macedo</h3>
-    <p class="text-muted text-center pb-2">Conta Corrente: 0480003-0</p>
-    <p class="text-muted text-center pb-2">Agência: 3182</p>
-    <ul class="list-group list-group-unbordered mb-3">
-      <li class="list-group-item">
-        <b>Data de Nascimento</b> <a class="float-right">03/08/1994</a>
-      </li>
-      <li class="list-group-item">
-        <b>CPF</b> <a class="float-right">***.***.530-23</a>
-      </li>
-      <li class="list-group-item">
-        <b>Email</b> <a class="float-right">rafael9408@gmail.com</a>
-      </li>
-    </ul>
-  </div>
-  <div class="col"></div>
-
-
-</div>
-
-<div class="row text-center">
-  <div class="col"></div>
-  <div class="col-8 card m-2">
-
-
-      <div class="card-header">
-        <h1 style="font-size: 35px;" class="text-center">Saldo</h1>
-      </div>
-      <hr>
-      <div class="card-body">
-        <h1 *ngIf="aparece" class="text-center">R$ 1870,30</h1>
-        <hr>
-        <button (click)="alterar()" class="btn btn-lg btn-outline-secondary">Mostrar Saldo</button>
-      </div>
-
-
-
-
-  </div>
-  <div class="col"></div>
-  </div> -->
-
-
-<div class="fundo">
+<!-- <div class="fundo">
   <div class="my-app">
     <header class="my-header">
 
       <main>
-
         <section class="my-app__header">
           <div class="container">
             <div class="my-app__header-inner">
@@ -60,12 +12,12 @@
                   <div class="my-card card">
                     <div class="my-card__header card-header">
                       <div class="my-card__header-title">
-                        <div class="my-text-overline">Saldo Atual
+                        <div >Saldo Atual
                         </div>
                         <span (click)="alterar()"><img src="https://cdn-icons-png.flaticon.com/512/2874/2874802.png"
                             width="35px"></span>
 
-                        <h3 *ngIf="aparece" class="my-text-headline pt-2 pb-3" > {{ pessoa.saldo }}</h3>
+
                       </div>
                     </div>
 
@@ -76,8 +28,6 @@
           </div>
         </section>
 
-
-
         <section class="my-app__body">
           <div class="container">
             <div class="row">
@@ -86,22 +36,22 @@
 
                 <div class="my-card card">
                   <div class="my-card__body card-body">
-                    <div class="my-text-overline">Dados do Cliente</div>
+                    <div >Dados do Cliente</div>
                     <ul class="my-list my-list--simple list-inline mb-0">
                       <li class="my-list-item ">
-                        <p class="my-text-overline">Data de nascimento</p>
+                        <p >Data de nascimento</p>
                         <p class="ms-2">{{pessoa.dataNascimento}}</p>
                       </li>
-                      <li class="my-list-item">
-                        <p class="my-text-overline">CPF</p>
+                      <li>
+                        <p >CPF</p>
                         <p class="ms-5">{{pessoa.cpf}}</p>
                       </li>
-                      <li class="my-list-item">
-                        <p class="my-text-overline">Conta-Corrente</p>
+                      <li>
+                        <p >Conta-Corrente</p>
                         <p class="ms-4">{{pessoa.conta_corrente}}</p>
                       </li>
-                      <li class="my-list-item">
-                        <p class="my-text-overline">Agência</p>
+                      <li>
+                        <p >Agência</p>
                         <p class="ms-5">{{pessoa.agencia}}</p>
                       </li>
                     </ul>
@@ -164,6 +114,84 @@
           </div>
         </section>
       </main>
+
     </header>
   </div>
-</div>
+</div> -->
+
+<header class="row mb-1">
+  <section class="col">
+    <div class="card">
+      <div class="card-header">
+
+        <section class="row">
+          <div class="col-6">
+            <h1 style="margin: 0">
+              Bem-vindo <b>{{ pessoa.nome }}</b>
+            </h1>
+          </div>
+
+          <div class="col-6 text-end">
+              <span *ngIf="aparece" class="pe-3" style="margin: 0; font-size: 20px;">R$ {{ pessoa.saldo }}</span>
+              <img (click)="alterar()" src="https://cdn-icons-png.flaticon.com/512/2874/2874802.png" width="35px"/>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+</header>
+
+<main class="row">
+  <section class="col-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="" style="margin: 0">Dados do cliente</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li>
+            <p class="text-success">Data de nascimento</p>
+            <p>{{ pessoa.dataNascimento }}</p>
+          </li>
+          <li>
+            <p class="text-success">CPF</p>
+            <p class="">{{ pessoa.cpf }}</p>
+          </li>
+          <li>
+            <p class="text-success">Conta-Corrente</p>
+            <p class="">{{ pessoa.conta_corrente }}</p>
+          </li>
+          <li>
+            <p class="text-success">Agência</p>
+            <p class="">{{ pessoa.agencia }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="col-8">
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="" style="margin: 0">Últimas Transações</h3>
+      </div>
+
+      <div class="card-body">
+
+        <h5 class="card-title">28 jul - Bank of America</h5>
+        <p class="card-text">Withdraw to bank account</p>
+        <p class="card-text">+250.00 USD</p>
+
+        <hr style="border: 0.5px solid grey;">
+
+        <h5 class="card-title">28 jul - Bank of America</h5>
+        <p class="card-text">Withdraw to bank account</p>
+        <p class="card-text">+250.00 USD</p>
+
+      </div>
+    </div>
+
+  </section>
+</main>
