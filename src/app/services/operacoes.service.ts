@@ -15,8 +15,9 @@ export class OperacoesService {
     return this.http.get<any>(this.apiUrl + '/' + 'saldo' + '/' + pessoa);
   }
 
-  transferencia(pessoa01: any, pessoa02: any, body: any): Observable<any> {
-    return this.http.put<any>(this.apiUrl + '/' + 'transferencia' + '/' + pessoa01, body);
+  transferencia(pessoa01: any, pessoa02: any, body: any, headers: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/' + 'transferencia' + '/' + pessoa01 + '/' + pessoa02, body, headers);
+    // return this.http.put<any>("localhost:8080/teste"+1, body, headers )
   }
 
   sacar(pessoa: any, body: any): Observable<any> {
@@ -26,4 +27,5 @@ export class OperacoesService {
   deposito(pessoa: any, body: any): Observable<any> {
     return this.http.put<any>(this.apiUrl + '/' + 'deposito' + '/' + pessoa, body);
   }
+
 }
