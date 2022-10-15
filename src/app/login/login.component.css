@@ -158,16 +158,16 @@ input[type="password"] {
 }
 
 fieldset input[type="text"]:focus {
-  border: 2px solid #008dde;
+  border: 2px solid #00995D;
 }
 
 fieldset input[type="password"]:focus {
-  border: 2px solid #008dde;
+  border: 2px solid #00995D;
 }
 
 fieldset input[type="submit"] {
   appearance: none;
-  background-color: #008dde;
+  background-color: #00995D;
   border: none;
   border-radius: 3px;
   color: #f4f4f4;

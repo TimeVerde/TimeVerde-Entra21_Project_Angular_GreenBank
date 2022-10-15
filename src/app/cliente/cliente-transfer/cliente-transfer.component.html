@@ -1,4 +1,4 @@
-'<div class="my-app">
+<!-- '<div class="my-app">
   <header class="my-header">
 
     <main>
@@ -9,7 +9,7 @@
             <div class="my-app__header-text media">
               <div class="media-body">
                 <h1 class="my-app__header-title text-center fw-light pb-2">Faça transferências entre GreenContas
-                  <!--{{nome}} -->
+
                 </h1>
                 <div class="my-card card">
                   <div class="my-card__header card-header">
@@ -102,4 +102,71 @@
     </main>
   </header>
 </div>
-'
+' -->
+
+<div class="row mx-auto container">
+  <div class="m-2 card pt-3">
+    <div class="card-header">
+      <div class="a display-4">GreenTransfer</div>
+    </div>
+    <div class="card-header">
+      <div class="row">
+        <div class="col-6 border-right">
+          <p class="c">{{pessoa01.conta_corrente}}</p>
+          <p class="c">{{pessoa01.agencia}}</p>
+          <p class="c">{{pessoa01.nome}}</p>
+          <p class="c">{{pessoa01.cpf}}</p>
+
+        </div>
+
+
+        <div class="col-6 text-end">
+          <p class="c">Conta-Corrente Destino</p>
+          <p class="c">Agência</p>
+          <p class="c">Nome Destino</p>
+          <p class="c">CPF Destino</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 text-center">
+          <h1 class="display-6 text-center">Qual valor irá transferir?</h1>
+
+          <label class="display-5 me-3">R$</label>
+          <input [(ngModel)]="saldo"
+            style="color: #00995D;font-size: 25px; border-radius: 10px 10px; border-style: dashed;" class="text-center"
+            type="number" required /> <br>
+          <button (click)="alterar()" class="btn btn-sm btn-outline-success mt-3">Transferir</button>
+        </div>
+        <!-- <div class="col-6 text-center pt-4 mt-3"> -->
+
+        <!-- </div> -->
+        <!-- <div class="col"></div> -->
+        <div class="col"></div>
+      </div>
+
+
+
+    </div>
+    <div *ngIf="aparece" class="b text-center">
+
+
+      <div class="text-center">
+        <h1 class="display-6 text-center">Validações</h1>
+
+        <label class="my-text-overline">Assinatura Eletrônica</label><br>
+        <input style="color: #00995D;font-size: 25px; border-radius: 10px 10px; border-style: dashed;" class="ms-4 text-center"
+        type="text" required /> <br>
+        <button style="margin-top: 10px;border-radius: 10px;" class="btn btn-sm btn-outline-success"
+          type="submit">Validar</button>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>

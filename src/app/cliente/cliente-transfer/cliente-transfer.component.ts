@@ -14,7 +14,7 @@ export class ClienteTransferComponent implements OnInit {
     private operacoesBancarias: OperacoesService,
     private pessoaLogado: PessoaLogadaService
   ) {}
-
+  aparece!:boolean
   pessoa01!: any;
   pessoa02: any = {};
   body!: any;
@@ -52,5 +52,8 @@ export class ClienteTransferComponent implements OnInit {
       .subscribe((response: any) => {
         console.log('funcionou', response);
       });
+  }
+  alterar(){
+    this.aparece = !this.aparece
   }
 }
