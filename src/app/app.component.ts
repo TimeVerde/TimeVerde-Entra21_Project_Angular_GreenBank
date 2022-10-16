@@ -70,15 +70,6 @@ export class AppComponent {
 
       }
     )
-    this.links.push(
-      {
-        rota: "clienteSaldo",
-        textContent: "Saldo",
-        class_a: "menu__item",
-        class_i:"fa fa-solid fa-piggy-bank"
-
-      }
-    )
 
     this.links.push(
       {
@@ -89,18 +80,26 @@ export class AppComponent {
 
       }
     )
+
+    this.links.push(
+      {
+        rota: "",
+        textContent: "Sair",
+        class_a: "menu__item",
+        class_i:"fa fa-light fa-arrow-right-from-bracket"
+
+      }
+    )
   }
 
   sair() : void {
     this.seguranca.logged = false
-    this.router.navigateByUrl("")
+    this.router.navigateByUrl("login")
   }
 
 
 
 alterar(){
-
   this.aparece = !this.aparece
-
 }
 }

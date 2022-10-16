@@ -24,8 +24,6 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-
-
     console.groupCollapsed('%c Seja bem-vindo ao GreenBank', 'color:green; font-weight:bold; text-shadow: 0 0 1em white;font-size: 24px')
     console.group("Nossos Integrantes:")
     console.table([
@@ -74,6 +72,7 @@ export class LoginComponent implements OnInit {
   register(): void {
     this.router.navigateByUrl('registrar');
   }
+
   collabGreen(): void {
     this.router.navigateByUrl('home');
   }

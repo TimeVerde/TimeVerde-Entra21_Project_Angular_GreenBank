@@ -1,80 +1,88 @@
-'<div class="my-app">
-  <header class="my-header">
+<header class="row mb-1">
+  <section class="col">
+    <div class="card">
+      <div class="card-header">
+        <section class="row">
+          <div class="col-6">
+            <h1 style="margin: 0">
+              Bem-vindo <b>{{ pessoa.nome }}</b>
+            </h1>
+          </div>
 
-    <main>
+          <div class="col-6 text-end">
+            <span
+              *ngIf="aparece"
+              class="pe-3"
+              style="margin: 0; font-size: 20px"
+              >R$ {{ pessoa.saldo }}</span
+            >
+            <img (click)="alterar()" src="{{ src }}" width="35px" />
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</header>
 
-      <section class="my-app__header">
-        <div class="container">
-          <div class="my-app__header-inner">
-            <div class="my-app__header-text media">
-              <div class="media-body">
-                <h1 class="my-app__header-title text-center fw-light">Deposite na sua GreenConta
-                  <!--{{nome}} -->
-                </h1>
-                <div class="my-card card">
-                  <div class="my-card__header card-header">
-                    <div class="my-card__header-title">
-                      <div class="my-text-overline">Conta-corrente que você irá depositar é:</div>
-                      <h3 class="my-text-headline pt-2 pb-3">NUMERO DA CONTA CORRENTE</h3>
-                      <div class="my-text-overline">Nome:</div>
-                      <h3 class="my-text-headline pt-2 pb-3">Nome do TITULAR</h3>
-                    </div>
-                  </div>
+<main class="row">
 
-                </div>
-              </div>
-            </div>
+  <section class="col-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="" style="margin: 0">Selecione um valor</h3>
+      </div>
+      <div class="card-body">
+        <ul *ngFor="let valor of valores, let i = index">
+          <li>
+            <p>
+              R$ {{valor}}
+              <a class="text-success" (click)="selecionando(i)" style="cursor: pointer;">Selecionar</a>
+            </p>
+          </li>
+          <hr style="border: 0.5px solid grey" />
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="col-8">
+
+    <div class="card">
+
+      <div class="card-header">
+        <h3 class="" style="margin: 0">Realizar depósito</h3>
+      </div>
+
+      <div class="card-body">
+
+
+
+        <div class="row mb-4">
+
+          <div class="col-6">
+
+            <label class="mb-2 text-success" for="agencia_pagante">Valor</label><br/>
+            <input [(ngModel)]="valorSelecionado" style="color: #00995D; border-style: dashed;" class="pt-2 pb-2 mb-4" type="number" required />
+
+            <label class="mb-2 text-success" for="agencia_pagante">Assinatura eletrônica</label><br/>
+            <input [(ngModel)]="password" style="color: #00995D; border-style: dashed;" class="pt-2 pb-2 mb-2" type="text" required />
+            <br>
+            <span *ngIf='mensagem != ""' class="alert alert-danger p-1 mt-2 text-center">{{ mensagem }}</span>
+
           </div>
         </div>
-      </section>
 
-
-
-      <section class="my-app__body">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-
-
-              <div class="my-card card pb-3">
-                <div class="my-card__body card-body">
-                  <div class="my-text-overline2 text-center fw-bolder">Validações</div>
-                  <ul class="my-list my-list--simple list-inline mb-0">
-
-                    <li class="my-list-item">
-                      <label class="my-text-overline">Senha</label>
-                      <input style="width: 90%; border-radius: 10px;" class="ms-2 text-center" type="text" required />
-                      <button style="border-radius: 10px;" class="btn ms-1 btn-sm btn-outline-secondary" type="submit">Validar</button>
-
-                    </li>
-
-
-
-
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="my-card card col me-2">
-              <div class="my-card__header card-header">
-                <h3 class="my-card__header-title card-title text-center">Qual valor irá depositar?</h3>
-              </div>
-              <ul class="my-list list-group list-group-flush">
-                <li class="ms-3 my-list-item ">
-                  <label class="my-text-overline3">R$</label>
-                  <input style="color: #00995D;font-size: 35px; border-radius: 10px 10px; border-style: dashed;"
-                    class="text-center ms-4" type="number" required />
-
-
-              </ul>
-            </div>
-
+        <div class="row">
+          <div class="col-5">
+            <button class="mb-4 btn btn-outline-success" (click)="validacaoSenha()">Depositar</button>
+            <button class="ms-2 mb-4 btn btn-outline-danger" (click)="limpar()">Cancelar</button>
           </div>
         </div>
-      </section>
-    </main>
-  </header>
-</div>
-'
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>

@@ -9,9 +9,10 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./cliente-info.component.css']
 })
 export class ClienteInfoComponent implements OnInit {
-  aparece!:boolean
+  aparece!:boolean;
   nome!: string
   pessoa!: any;
+  src: string = "../../../assets/olho aberto.png"
 
   constructor(
     private usuarioService: UsuarioService,
@@ -21,15 +22,18 @@ export class ClienteInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.pessoa = this.pessoaLogada.getpessoa();
-    this.aparece=false
+    this.aparece=true
   }
 
   alterar(){
     this.aparece = !this.aparece
+
+    if(this.aparece == false) {
+      this.src = "../../../assets/olho fechado.png"
+    }
+    if(this.aparece == true) {
+
+      this.src = "../../../assets/olho aberto.png"
+    }
   }
-
-  saldoBancario() {
-
-  }
-
 }
