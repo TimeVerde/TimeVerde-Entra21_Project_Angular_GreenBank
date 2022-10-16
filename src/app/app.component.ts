@@ -20,22 +20,12 @@ export class AppComponent {
       this.aparece=true
         this.links = new Array();
 
-
         this.links.push(
       {
         rota: "clienteInfo",
         textContent: "Informações",
         class_a: "menu__item",
         class_i:"fa fa-thin fa-user"
-
-      }
-    )
-    this.links.push(
-      {
-        rota: "clienteSaque",
-        textContent: "Saques",
-        class_a: "menu__item",
-        class_i:"fa fa-solid fa-money-bill "
 
       }
     )
@@ -46,6 +36,16 @@ export class AppComponent {
         textContent: "Depósito",
         class_a: "menu__item",
         class_i:"fa fa-solid fa-sack-dollar"
+
+      }
+    )
+
+    this.links.push(
+      {
+        rota: "clienteSaque",
+        textContent: "Saques",
+        class_a: "menu__item",
+        class_i:"fa fa-solid fa-money-bill "
 
       }
     )

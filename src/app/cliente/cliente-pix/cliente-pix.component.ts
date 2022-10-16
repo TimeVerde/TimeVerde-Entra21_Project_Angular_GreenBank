@@ -28,13 +28,14 @@ export class ClientePixComponent implements OnInit {
   mensagem: string = ''
   password!: string;
   valor!: any;
-  chavePix!: any;
+  chavePix!: string;
 
   ngOnInit(): void {
     this.pessoa = this.pessoaLogado.getpessoa();
     this.aparece= true
     this.validacao = false
-    this.chavePix = {}
+    this.chavePix = ''
+    this.valor = {}
     this.pessoaSelecionada = {}
     this.getAll()
   }
@@ -52,7 +53,6 @@ export class ClientePixComponent implements OnInit {
   }
 
   selecionado(param: any) {
-    console.log("Testando", this.chavePix);
     this.pessoaSelecionada = this.clientes[param]
     console.log(this.pessoaSelecionada);
   }
@@ -71,16 +71,15 @@ export class ClientePixComponent implements OnInit {
       });
   }
 
-  validacaoSenha() {
-
-    console.log(this.password);
-    console.log(this.pessoa.senha);
+  validacaoSenha(): boolean {
+    let valid: boolean = true
 
     if(this.password != this.pessoa.senha) {
       this.mensagem = "senha incorreta"
     } else {
       console.log("senha correta");
     }
+    return valid
   }
 
   limpar() {
@@ -88,5 +87,26 @@ export class ClientePixComponent implements OnInit {
     this.pessoaSelecionada = ''
     this.password = ''
     this.valor = ''
+    this.chavePix = ''
+  }
+
+  pix() {
+
+    if(!this.validacaoSenha()) {
+      return
+    }
+
+    this.pessoa.saldo = this.pessoa.saldo - this.valor;
+    this.pessoaSelecionada.saldo = this.pessoaSelecionada.saldo + this.valor
+
+    this.operacoesBancarias.transferencia(this.pessoa, this.pessoaSelecionada)
+    .pipe(
+      catchError((error) => {
+        return of("Testando", error)
+      })
+    )
+    .subscribe((response) => {
+      console.log("Funcionando", response);
+    })
   }
 }

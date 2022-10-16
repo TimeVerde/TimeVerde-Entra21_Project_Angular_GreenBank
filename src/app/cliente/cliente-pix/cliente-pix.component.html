@@ -27,22 +27,41 @@
 <main class="row">
 
   <section class="col-4">
+
     <div class="card">
+      <div class="card-header">
+        <h3 class="" style="margin: 0">
+          1° Selecione a pessoa
+        </h3>
+        <h3 class="" style="margin: 0">
+          2° Selecione a chave pix
+        </h3>
+        <h3 class="" style="margin: 0">
+          2° Realize a transferência
+        </h3>
+      </div>
+    </div>
+
+    <div class="card">
+
       <div class="card-header">
         <h3 class="" style="margin: 0">Lista de clientes</h3>
       </div>
+
       <div class="card-body">
         <ul *ngFor="let cliente of clientes; let i = index">
-          <li>
+          <li [hidden]="cliente.nome == pessoa.nome">
             <p>
               {{ cliente.nome }} -
               <a class="text-success" (click)="selecionado(i)" style="cursor: pointer;">Selecionar</a>
             </p>
+            <hr style="border: 0.5px solid grey" />
           </li>
-          <hr style="border: 0.5px solid grey" />
         </ul>
       </div>
+
     </div>
+
   </section>
 
   <section class="col-8">
@@ -50,11 +69,10 @@
     <div class="card">
 
       <div class="card-header">
-        <h3 class="" style="margin: 0">Realizar transferência</h3>
+        <h3 class="" style="margin: 0">Realizar transferência para <u>{{pessoaSelecionada.nome}}</u></h3>
       </div>
 
       <div class="card-body">
-
 
 
         <div class="row">
@@ -64,9 +82,8 @@
             <h2 class="mb-4" style="margin: 0">Pagante</h2>
 
             <label class="mb-2 text-success" for="conta_corrente_pagante">Selecione a chave</label><br/>
-            <select [(ngModel)]="chavePix" class="form-select" required>
-              <option>selecione</option>
-              <option value="{{pessoaSelecionada.nome}}">Nome</option>
+            <select [(ngModel)]="chavePix" class="form-select" aria-label="Default select example">
+              <option></option>
               <option value="{{pessoaSelecionada.cpf}}">CPF</option>
               <option value="{{pessoaSelecionada.celular}}">Telefone</option>
             </select>
@@ -95,7 +112,7 @@
 
         <div class="row">
           <div class="col-5">
-            <button class="mb-4 btn btn-outline-success" (click)="validacaoSenha()">Transferir</button>
+            <button class="mb-4 btn btn-outline-success" (click)="pix()">Transferir</button>
             <button class="ms-2 mb-4 btn btn-outline-danger" (click)="limpar()">Cancelar</button>
           </div>
         </div>

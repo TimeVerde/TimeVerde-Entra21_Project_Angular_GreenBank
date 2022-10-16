@@ -85,7 +85,7 @@ export class RegistrarComponent implements OnInit {
       valid = false;
     }
     if (
-      !this.pessoa.genero
+      !this.pessoa.sexo
     ) {
       this.mensagem += 'gênero'
       valid = false;
@@ -156,6 +156,8 @@ export class RegistrarComponent implements OnInit {
       this.mensagem += 'senha'
       valid = false;
     }
+    console.log(this.mensagem);
+
     return valid;
   }
 }

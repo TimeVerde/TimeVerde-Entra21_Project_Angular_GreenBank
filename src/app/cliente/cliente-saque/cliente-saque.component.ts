@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { catchError, of } from 'rxjs';
 import { OperacoesService } from 'src/app/services/operacoes.service';
 import { PessoaLogadaService } from 'src/app/services/pessoa-logada.service';
 import { PessoaService } from 'src/app/services/pessoa.service';
@@ -52,7 +53,8 @@ export class ClienteSaqueComponent implements OnInit {
     console.log(this.valorSelecionado);
   }
 
-  validacaoSenha() {
+  validacaoSenha(): boolean {
+    let valid: boolean = true;
 
     console.log(this.password);
     console.log(this.pessoa.senha);
@@ -62,11 +64,32 @@ export class ClienteSaqueComponent implements OnInit {
     } else {
       console.log("senha correta");
     }
+    return valid;
   }
 
   limpar() {
     this.mensagem = ''
     this.valorSelecionado = ''
     this.password = ''
+  }
+
+  saque() {
+
+    if(!this.validacaoSenha()) {
+      return
+    }
+
+    this.pessoa.saldo = this.pessoa.saldo - this.valorSelecionado
+
+    this.operacoesBancarias.sacar(this.pessoa)
+    .pipe(
+      catchError((error) => {
+        return of("Testando", error)
+      })
+    )
+    .subscribe((response) => {
+      console.log("Funcionou", response);
+    })
+
   }
 }

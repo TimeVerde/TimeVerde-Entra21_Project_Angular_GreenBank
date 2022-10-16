@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class OperacoesService {
 
-  apiUrl: string = "localhost:8080/sistema"
+  apiUrl: string = "http://localhost:8080/sistema"
 
   constructor(private http: HttpClient) {}
 
@@ -15,17 +15,15 @@ export class OperacoesService {
     return this.http.get<any>(this.apiUrl + '/' + 'saldo' + '/' + pessoa);
   }
 
-  transferencia(pessoa01: any, pessoa02: any, body: any, headers: any): Observable<any> {
-    return this.http.put<any>(this.apiUrl + '/' + 'transferencia' + '/' + pessoa01 + '/' + pessoa02, body, headers);
-    // return this.http.put<any>("localhost:8080/teste"+1, body, headers )
+  transferencia(pessoa01: any, pessoa02: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/' + 'transferencia' + '/' + pessoa01.id + '/' + pessoa02.id, pessoa02);
   }
 
-  sacar(pessoa: any, body: any): Observable<any> {
-    return this.http.put<any>(this.apiUrl + '/' + 'sacar' + '/' + pessoa, body);
+  sacar(pessoa: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/' + 'sacar' + '/' + pessoa.id, pessoa);
   }
 
-  deposito(pessoa: any, body: any): Observable<any> {
-    return this.http.put<any>(this.apiUrl + '/' + 'deposito' + '/' + pessoa, body);
+  deposito(pessoa: any): Observable<any> {
+    return this.http.put<any>(this.apiUrl + '/' + 'deposito' + '/' + pessoa.id, pessoa);
   }
-
 }

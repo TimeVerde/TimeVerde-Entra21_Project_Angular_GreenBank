@@ -35,6 +35,7 @@ export class ClienteTransferComponent implements OnInit {
     this.aparece= true
     this.validacao = false
     this.pessoaSelecionada = {}
+    this.valor = {}
     this.getAll()
   }
 
@@ -69,16 +70,15 @@ export class ClienteTransferComponent implements OnInit {
       });
   }
 
-  validacaoSenha() {
-
-    console.log(this.password);
-    console.log(this.pessoa.senha);
+  validacaoSenha(): boolean {
+    let valid: boolean = true;
 
     if(this.password != this.pessoa.senha) {
       this.mensagem = "senha incorreta"
     } else {
       console.log("senha correta");
     }
+    return valid
   }
 
   limpar() {
@@ -88,33 +88,23 @@ export class ClienteTransferComponent implements OnInit {
     this.valor = ''
   }
 
-  // transferencia() {
-  //   this.body = {
-  //     saldo: this.saldo,
-  //   };
+  transferencia() {
 
+    if(!this.validacaoSenha()) {
+      return
+    }
 
-  //   const headers = new HttpHeaders({
-  //     Accept: 'application/json',
-  //     'Content-Type': 'application/json',
-  //   });
+    this.pessoa.saldo = this.pessoa.saldo - this.valor;
+    this.pessoaSelecionada.saldo = this.pessoaSelecionada.saldo + this.valor
 
-  //   console.log('Pessoa01: ', this.pessoa01);
-  //   console.log('Pessoa02: ', this.pessoa02);
-  //   console.log('Body', this.body);
-  //   console.log("Header", headers);
-
-
-  //   this.operacoesBancarias
-  //     .transferencia(this.pessoa01.id, this.pessoa02.id, this.body, headers)
-  //     .pipe(
-  //       catchError((error) => {
-  //         return of('não funcionou', error);
-  //       })
-  //     )
-  //     .subscribe((response: any) => {
-  //       console.log('funcionou', response);
-  //     });
-  // }
-
+    this.operacoesBancarias.transferencia(this.pessoa, this.pessoaSelecionada)
+    .pipe(
+      catchError((error) => {
+        return of("Testando", error)
+      })
+    )
+    .subscribe((response) => {
+      console.log("Funcionando", response);
+    })
+  }
 }
